@@ -1,123 +1,34 @@
 <!DOCTYPE html>
-<!--TODO:(with sorry)-->
-<!--buttons,select,input/output,command,textbox-->
-<!--compire run,debug and others-->
-<!--saving files,no openning files-->
-<!--other code operations-->
-<!--using ACE fully(such as other themes,etc.)-->
-<!--using like emacs,Vim(it's up to users)-->
-<!--local files & ace libs(it means you can use it offline).Most impotant-->
-<!--support JSON-->
-<!--beautifuly-->
-<html>
-	<head>
-		<title>Text Editor</title>	
-		<!--took in-->
-		<script src = "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type = "text/javascript" charset = "utf-8"></script>
-		<script src = "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type = "text/javascript" charset = "utf-8"></script>
+<head>
+<meta charset = UTF-8 />
+<title>TangYida's ugly blog</title>
+<link href="main.css" type="text/css" rel="stylesheet">
+<!--use NES.css MIT-->
+<link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<!--<style>
+ html,body,pre,code,kbd,samp {
+	 font-family: "";
+ }
+</style>-->
+</head>
 
-		<script type = "text/javascript" src = "jquery.min.js"></script>
-		<script type = "text/javascript" src = "teLib.js"></script>
-		<script type = "text/javascript" src = "actions.js"></script>
-		<script>
-			var isAudioOn = true;
-			var time = 10000;
-			var storage = window.localStorage;
-			var theme,lang,text,openFile;
-
-			if(storage.getItem('_code-theme') == null)
-				theme = 'solarized_light';
-			else
-				theme = storage.getItem('_code-theme');
-			if(storage.getItem('_code-lang') == null)
-				lang = 'c_cpp';
-			else
-				lang = 	storage.getItem('_code-lang');
-			text = 'Text Editor\nWelcome You';	
-		</script>
-		<link href="gh-buttons.css" rel="stylesheet" type="text/css">
-		<link href="textEditor.css" rel="stylesheet" type="text/css">
-	</head>
-
-	<!--**************************************************************-->
-
-	<body onoffline="alert('Offline! @_@')">
-		<div id = "te-main">
-			<!--Title-->
-		<header class = "am-topbar">
-				<h1 class="am-topbar-brand">
-			<!--<a href="#">-->Text Editor<!--</a>-->
-				</h1>
-				<a href="#" class="button icon rss  button-style-audio" id="audioCon" onclick="audioClick()">Audio</a>
-				<div class = "button-group button-style-group">
-				<a href="#" class="button icon log button-style" id="openfile" onclick="openfileClick()">Open</a>
-				<a href="#" class="button icon edit button-style" id="downloadfile" onclick="downloadfileClick()">Save</a>	
-				</div>
-		</header>
-		
+<body>
+<header id = "webTitle">
+	<div id = "divTop1">
+		<div id = "TopLeft"><h1>
+			<span class = "nes-text is-primary">TangYida's ugly blog</span>
+		</h1></div>
+		<div id = "TopRight">
+			<span class="nes-text is-success">By TangYida Yali School</span>
 		</div>
-			<!--code input-->
-			<div id = "te-body">
-				<pre name = "code" id = "code" class = "ace_editor te-pre" style = "font-size: 18px;min-height: 100%"> 
-				<textarea class="ace_text-input" wrap="off" autocorrect="on" autocapitalize="on" spellcheck="true" style="opacity: 0; height: 22px; width: 9.89656px; left: 47px; top: 0px;">
-				</textarea></pre>
-			</div>
-			<input type="hidden" class="commandLine "id="commandLine">
-			</input>
-		</div>
+	</div>
+</header>
 
-		<!--init-->
-		<script>
-		//*The storage items:
-		//_code-text
-		//_code-theme
-		//_code-lang
-		//files
-
-			editor = ace.edit("code");
-			editor.setTheme("ace/theme/" + theme);
-			editor.session.setMode("ace/mode/" + lang);
-
-			editor.setFontSize(18);
-			editor.setReadOnly(false);
-			editor.setOption("wrap","free");
-			ace.require("ace/ext/language_tools");
-			editor.setValue(text);
-			editor.setOptions({
-				enableBasicAutocompletion: true,
-				enableSnippets: true,
-				enableLiveAutocompletion: true
-			});
-			testDebug();
-			
-			$(document).keydown(function(event){
-				if(isAudioOn) {
-					var a = document.createElement('video');
-					a.src = './keydown.mp3';
-					a.play();
-				}
-				if(event.keyCode == 0x1b) {
-					var command = document.getElementById("commandLine");
-					command.type = "text";
-					command.focus();
-				}
-			});
-
-			$("#commandLine").on("keydown",function(event) {
-				var command = document.getElementById("commandLine");
-				if(event.keyCode == 13) {
-					readCommand(command.value);
-					command.style = 'rgba(0,0,0,0.2)';
-					command.type = 'hidden';
-					editor.focus();
-					command.value = "";
-				}
-			});
-
-			setInterval(function(){
-				storage.setItem('_code-text',editor.getValue());
-			},time);
-		</script>
-		</body>
+<aside></aside>
+<article id = "main"></article>
+<footer></footer>
+</body>
 
 </html>
+
