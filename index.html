@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <head>
-<meta charset = UTF-8 />
-<title>TangYida's ugly blog</title>
-<link href="main.css" type="text/css" rel="stylesheet">
-<!--use NES.css MIT-->
-<link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-<!--<style>
- html,body,pre,code,kbd,samp {
-	 font-family: "";
- }
-</style>-->
+  <meta charset = UTF-8 />
+  <title>TangYida's ugly blog</title>
+  <!--use NES.css MIT-->
+
+  <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="main.css" type="text/css" rel="stylesheet">
+
+  <script>
+    if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
+      window.alert('IE is not supported on this page.')
+    }
+  </script>
 </head>
 
 <body>
-<header id = "webTitle">
-	<div id = "divTop1">
-		<div id = "TopLeft"><h1>
-			<span class = "nes-text is-primary">TangYida's ugly blog</span>
-		</h1></div>
-		<div id = "TopRight">
-			<span class="nes-text is-success">By TangYida Yali School</span>
-		</div>
-	</div>
-</header>
+  <header id = "webTitle">
+    <div id = "divTop1">
+      <div id = "TopLeft"><h1>
+        <span class = "nes-text is-primary">TangYida's ugly blog</span>
+      </h1></div>
+      <div id = "TopRight">
+        <span class="nes-text is-success">By TangYida,,Yali School</span>
+      </div>
+    </div>
+  </header>
 
-<aside></aside>
-<article id = "main"></article>
-<footer></footer>
+  <article id="main">
+    <div class = "nes-container with-title is-dark is-centered">
+      <p class = "title">Table Of Contents</p>
+      <ul class="nes-list is-dic">
+        <li><a href="https://www.luogu.org/blog/TangYida/" target="_blank">LuoguBlog</li>
+        <li><a href="C1My_Blog.html">My first passage:My Blog</a></li>
+      </ul>
+    </div>
+    <div>
+  </article>
+
+  <footer>
+    <span class="nes-text is-success">
+      <a href="https://github.com/TangYida/TangYida.github.io">github</a>
+      <a href="https://github.com/nostalgic-css/NES.css">NES.css</a>
+    </span>
+  </footer>
 </body>
 
 </html>

@@ -1,0 +1,20 @@
+code {
+	font-family:"Consolas",monospace
+}
+
+.home {
+	float:right;
+top:500px;      
+}
+/*FIXME*/
+.mtext {
+	font-family:¿¬Ìו;
+ 	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;	
+	top:50;
+}
+
+blockquote {
+	font-family:ËÎÌו;
+}
