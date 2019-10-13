@@ -20,9 +20,34 @@
       <div id = "TopLeft"><h1>
         <span class = "nes-text is-primary">TangYida's ugly blog</span>
       </h1></div>
-      <div id = "TopRight">
+      <div id = "TopMiddle">
         <span class="nes-text is-success">By TangYida,Yali School</span>
       </div>
+      <div id = "TopRight">
+       <span>
+         <button type="button" class="nes-btn is-success"
+		 onclick="document.getElementById('dialog-search').showModal();">
+           search
+         </button>
+
+         <dialog class="nes-dialog is-rounded" id="dialog-search">
+           <form method="dialog">
+             <p class="title">search</p>
+             <menu class="dialog-menu">
+               <button class="nes-btn">Cancel</button>
+	       <button class="nes-btn is-primary">Go!</button>
+             </menu>
+           </form>
+         </dialog>
+
+       </section>
+      </span>
+      <span>
+       <button type="button" class="nes-btn is-warning"
+	       onclick="window.open('https://tangyida.github.io/archives.html')">	
+	archives       
+       </button> 
+      </span>
     </div>
   </header>
 
