@@ -108,8 +108,23 @@
 	</li>
 
       </ul>
-    </div>
-    <div>
+     <div id="container"></div>
+     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+     <script>
+     var gitment = new Gitment({
+       id: 'location.href',
+       owner: 'TangYida',
+       repo: 'gitment',
+       oauth: {
+         client_id: 'f4e2435032cd4d71b937',
+         client_secret: '1f8eee70b694ba4a56b03129885734feb78d7b11',
+       },
+     })
+     gitment.render('container')
+     </script>
+
+   </div>
   </article>
 
   <footer>
