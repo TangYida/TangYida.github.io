@@ -47,9 +47,30 @@
 	archives       
        </button> 
       </span>
+      <span>
+	      <button type="button" class="net-btn is-error"
+		      onclick="document.getElementById('dialog-send').showModal();">
+              send e-mail to me!!!	
+	      </button>
+              <dialog class="nes-dialog is-rounded" id="dialog-send">
+                <form method="dialog">
+                  <h3>send e-mail to TangYida.</h3>
+
+		  <p>TangYida is so lazy.He didn't add comment</p>
+		  <p>system to his ugly blog.Is you wanna DIAOCAI</p>
+		  <p>him,please send e-mail.</p>
+
+                  <a href="mailto:tang361313182@outlook.com?subject=Hello,TangYida&body=...">
+       		  <h3>SEND!</h3></a>
+
+                  <menu class="dialog-menu">
+                    <button class="nes-btn">Cancel</button>
+                  </menu>
+                </form>
+              </dialog>
+      </span>
     </div>
   </header>
-
   <article id="main">
     <div class = "nes-container with-title is-dark">
       <p class = "title">Table Of Contents</p>
@@ -161,8 +182,10 @@
       <a href="https://github.com/TangYida/TangYida.github.io">github</a>
       theme:
       <a href="https://github.com/nostalgic-css/NES.css">NES.css</a>
+
       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-      <span id="busuanzi_container_site_pv">visited:<span id="busuanzi_value_site_pv"></span>times</span>
+      <span id="busuanzi_container_site_pv">  visited times: <span id="busuanzi_value_site_pv"></span>times</span>
+
     </span>
   </footer>
 </body>
