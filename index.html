@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--{{{ head part-->
 <head> <meta charset = UTF-8 /> <title>TangYida's ugly blog</title>
   <!--use NES.css MIT-->
 
@@ -13,13 +14,14 @@
 <style>
 @font-face {
 	font-family:zpix;
-	src: url('Zpix.ttf');
+	src: url('./Zpix.ttf');
 }
 </style>
 </head>
+<!--}}}-->
 
-<body
-	background="https://cn.bing.com/th?id=OHR.AlbertaThanksgiving_ZH-CN5899007960_1920x1080.jpg">
+<body background="https://cn.bing.com/th?id=OHR.AlbertaThanksgiving_ZH-CN5899007960_1920x1080.jpg">
+  <!--{{{ header part-->	
   <header id = "webTitle">
     <div id = "divTop1">
       <div id = "TopLeft"><h1>
@@ -29,7 +31,7 @@
         <span class="nes-text is-success">By TangYida,Yali School</span>
       </div>
       <div id = "TopRight">
-       <span>
+      <span>
          <button type="button" class="nes-btn is-success"
 		 onclick="document.getElementById('dialog-search').showModal();">
            search
@@ -44,30 +46,29 @@
              </menu>
            </form>
          </dialog>
-
-       </section>
       </span>
       <span>
-       <button type="button" class="nes-btn is-warning"
+      <button type="button" class="nes-btn is-warning"
 	       onclick="window.open('https://tangyida.github.io/archives.html')">	
 	archives       
        </button> 
       </span>
+
       <span>
-	      <button type="button" class="net-btn is-primary"
+	      <button type="button" class="net-btn is-warning"
 		      onclick="document.getElementById('dialog-send').showModal();">
-              send e-mail to me!!!	
+              send to me!!!	
 	      </button>
               <dialog class="nes-dialog is-rounded" id="dialog-send">
                 <form method="dialog">
-                  <h3>send e-mail to TangYida.</h3>
+                  <h2>send e-mail to TangYida.</h2>
 
 		  <p>TangYida is so lazy.He didn't add comment</p>
 		  <p>system to his ugly blog.Is you wanna DIAOCAI</p>
 		  <p>him,please send e-mail.</p>
 
-                  <a href="mailto:tang361313182@outlook.com?subject=Hello,TangYida&body=...">
-       		  <h3>SEND!</h3></a>
+                  <a href="mailto:tang361313182@outlook.com?subject=Hi,TangYida&body=write something...">
+       		  <h2>SEND!</h2></a>
 
                   <menu class="dialog-menu">
                     <button class="nes-btn">Cancel</button>
@@ -77,6 +78,9 @@
       </span>
     </div>
   </header>
+  <!--}}}-->
+
+  <!--{{{article list-->
   <article id="main">
     <div class = "nes-container with-title is-dark">
       <p class = "title">Table Of Contents</p>
@@ -198,7 +202,9 @@
       </ul>
     </div>
   </article>
+  <!--}}}-->
 
+  <!--footer part{{{-->
   <footer>
     <span class="nes-text is-success">
       powered by:	    
@@ -207,10 +213,11 @@
       <a href="https://github.com/nostalgic-css/NES.css">NES.css</a>
 
       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-      <span id="busuanzi_container_site_pv">  visited times: <span id="busuanzi_value_site_pv"></span>times</span>
+      <span id="busuanzi_container_site_pv">  visited: <span id="busuanzi_value_site_pv"></span> times</span>
 
     </span>
   </footer>
+  <!--}}}-->
 </body>
 
 </html>
