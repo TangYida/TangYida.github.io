@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/programmes/trade.cpp.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="cpp">
+<meta name="settings" content="number_lines,use_css,pre_wrap,no_foldcolumn,expand_tabs,line_ids,prevent_copy=">
+<meta name="colorscheme" content="gruvbox">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #ebdbb2; background-color: #282828; }
+body { font-family: monospace; color: #ebdbb2; background-color: #282828; }
+* { font-size: 1em; }
+.GruvboxYellow { color: #fabd2f; }
+.String { color: #b8bb26; }
+.GruvboxOrange { color: #fe8019; }
+.GruvboxPurple { color: #d3869b; }
+.LineNr { color: #7c6f64; }
+.GruvboxAqua { color: #8ec07c; }
+.GruvboxRed { color: #fb4934; }
+.Comment { color: #928374; font-style: italic; }
+.GruvboxGreenBold { color: #b8bb26; font-weight: bold; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+/* function to open any folds containing a jumped-to line before jumping to it */
+function JumpToLine()
+{
+  var lineNum;
+  lineNum = window.location.hash;
+  lineNum = lineNum.substr(1); /* strip off '#' */
+
+  if (lineNum.indexOf('L') == -1) {
+    lineNum = 'L'+lineNum;
+  }
+  var lineElem = document.getElementById(lineNum);
+  /* Always jump to new location even if the line was hidden inside a fold, or
+   * we corrected the raw number to a line ID.
+   */
+  if (lineElem) {
+    lineElem.scrollIntoView(true);
+  }
+  return true;
+}
+if ('onhashchange' in window) {
+  window.onhashchange = JumpToLine;
+}
+
+-->
+</script>
+</head>
+<body onload='JumpToLine();'>
+<pre id='vimCodeElement'>
+<span id="L1" class="LineNr"> 1 </span><span class="GruvboxAqua">#include</span><span class="String">&lt;bits/stdc++.h&gt;</span>
+<span id="L2" class="LineNr"> 2 </span><span class="GruvboxAqua">#define </span><span class="GruvboxYellow">int</span><span class="GruvboxAqua"> </span><span class="GruvboxYellow">long</span><span class="GruvboxAqua"> </span><span class="GruvboxYellow">long</span>
+<span id="L3" class="LineNr"> 3 </span><span class="GruvboxOrange">const</span> <span class="GruvboxYellow">int</span> N = <span class="GruvboxPurple">5e3</span> + <span class="GruvboxPurple">3</span>;
+<span id="L4" class="LineNr"> 4 </span>
+<span id="L5" class="LineNr"> 5 </span><span class="GruvboxYellow">int</span> n,w;
+<span id="L6" class="LineNr"> 6 </span><span class="GruvboxYellow">int</span> size[N];
+<span id="L7" class="LineNr"> 7 </span><span class="GruvboxYellow">int</span> ver[N &lt;&lt; <span class="GruvboxPurple">1</span>],head[N],nxt[N &lt;&lt; <span class="GruvboxPurple">1</span>],edge[N &lt;&lt; <span class="GruvboxPurple">1</span>],tot{<span class="GruvboxPurple">1</span>};
+<span id="L8" class="LineNr"> 8 </span><span class="GruvboxYellow">int</span> f[N][N];
+<span id="L9" class="LineNr"> 9 </span>
+<span id="L10" class="LineNr">10 </span><span class="GruvboxYellow">inline</span> <span class="GruvboxYellow">void</span> <span class="GruvboxGreenBold">add</span>(<span class="GruvboxYellow">int</span> x,<span class="GruvboxYellow">int</span> y,<span class="GruvboxYellow">int</span> z)
+<span id="L11" class="LineNr">11 </span>{<span class="Comment">/*</span><span class="Comment">{{{</span><span class="Comment">*/</span>
+<span id="L12" class="LineNr">12 </span>        ver[++tot] = y,edge[tot] = z,nxt[tot] = head[x],head[x] = tot;
+<span id="L13" class="LineNr">13 </span>}<span class="Comment">/*</span><span class="Comment">}}}</span><span class="Comment">*/</span>
+<span id="L14" class="LineNr">14 </span>
+<span id="L15" class="LineNr">15 </span><span class="GruvboxYellow">inline</span> <span class="GruvboxYellow">int</span> <span class="GruvboxGreenBold">read</span>()
+<span id="L16" class="LineNr">16 </span>{<span class="Comment">/*</span><span class="Comment">{{{</span><span class="Comment">*/</span>
+<span id="L17" class="LineNr">17 </span>        <span class="GruvboxYellow">int</span> s{<span class="GruvboxPurple">0</span>},f{<span class="GruvboxPurple">1</span>}; <span class="GruvboxYellow">char</span> ch;
+<span id="L18" class="LineNr">18 </span>        <span class="GruvboxRed">while</span>(!<span class="GruvboxGreenBold">isdigit</span>(ch = <span class="GruvboxGreenBold">getchar</span>())) <span class="GruvboxRed">if</span>(ch == <span class="GruvboxPurple">'-'</span>) f = -<span class="GruvboxPurple">1</span>;
+<span id="L19" class="LineNr">19 </span>        <span class="GruvboxRed">while</span>(<span class="GruvboxGreenBold">isdigit</span>(ch)) s = s * <span class="GruvboxPurple">10</span> + ch - <span class="GruvboxPurple">'0'</span>,ch = <span class="GruvboxGreenBold">getchar</span>();
+<span id="L20" class="LineNr">20 </span>        <span class="GruvboxRed">return</span> s * f;
+<span id="L21" class="LineNr">21 </span>}<span class="Comment">/*</span><span class="Comment">}}}</span><span class="Comment">*/</span>
+<span id="L22" class="LineNr">22 </span>
+<span id="L23" class="LineNr">23 </span><span class="GruvboxYellow">inline</span> <span class="GruvboxYellow">void</span> <span class="GruvboxGreenBold">chkMax</span>(<span class="GruvboxYellow">int</span>&amp; x,<span class="GruvboxYellow">int</span> y) {x = <span class="GruvboxPurple">std</span>::<span class="GruvboxGreenBold">max</span>(x,y);}
+<span id="L24" class="LineNr">24 </span>
+<span id="L25" class="LineNr">25 </span><span class="GruvboxYellow">inline</span> <span class="GruvboxYellow">void</span> <span class="GruvboxGreenBold">dfs</span>(<span class="GruvboxYellow">int</span> x,<span class="GruvboxYellow">int</span> fa)
+<span id="L26" class="LineNr">26 </span>{
+<span id="L27" class="LineNr">27 </span>        size[x] = <span class="GruvboxPurple">1</span>;
+<span id="L28" class="LineNr">28 </span>        <span class="GruvboxRed">for</span>(<span class="GruvboxYellow">int</span> i = head[x];i;i = nxt[i]) {
+<span id="L29" class="LineNr">29 </span>                <span class="Comment">/*</span><span class="Comment">size[x]实际是子树大小前缀和，写起来更加简洁</span><span class="Comment">*/</span>
+<span id="L30" class="LineNr">30 </span>                <span class="GruvboxRed">if</span>(ver[i] == fa) <span class="GruvboxRed">continue</span>;
+<span id="L31" class="LineNr">31 </span>                <span class="GruvboxGreenBold">dfs</span>(ver[i],x);
+<span id="L32" class="LineNr">32 </span>
+<span id="L33" class="LineNr">33 </span>                <span class="GruvboxAqua">#define </span><span class="GruvboxGreenBold">__f</span><span class="GruvboxAqua">(i,up) </span><span class="GruvboxRed">for</span><span class="GruvboxAqua">(</span><span class="GruvboxYellow">int</span><span class="GruvboxAqua"> (i) = up;(i) &gt;= </span><span class="GruvboxPurple">0</span><span class="GruvboxAqua">;(i)--)</span>
+<span id="L34" class="LineNr">34 </span>                <span class="Comment">/*</span><span class="Comment">要注意倒序枚举</span><span class="Comment">*/</span>
+<span id="L35" class="LineNr">35 </span>                <span class="GruvboxGreenBold">__f</span>(j,size[x]) <span class="GruvboxGreenBold">__f</span>(k,size[ver[i]]) {<span class="Comment">/*</span><span class="Comment">分组背包??</span><span class="Comment">*/</span>
+<span id="L36" class="LineNr">36 </span>                        <span class="GruvboxRed">if</span>(w - k &lt; <span class="GruvboxPurple">0</span> || (n - w + k - size[ver[i]]) &lt; <span class="GruvboxPurple">0</span>)
+<span id="L37" class="LineNr">37 </span>                                <span class="GruvboxRed">continue</span>;
+<span id="L38" class="LineNr">38 </span>                        <span class="GruvboxGreenBold">chkMax</span>(f[x][j + k],f[x][j] + f[ver[i]][k] +
+<span id="L39" class="LineNr">39 </span>                         edge[i] * k * (w - k) +
+<span id="L40" class="LineNr">40 </span>                         edge[i] * (size[ver[i]] - k) * (n - w + k - size[ver[i]]));
+<span id="L41" class="LineNr">41 </span>                }
+<span id="L42" class="LineNr">42 </span>                <span class="GruvboxAqua">#undef __f</span>
+<span id="L43" class="LineNr">43 </span>                size[x] += size[ver[i]]; <span class="Comment">/*</span><span class="Comment">更新子树大小前缀和</span><span class="Comment">*/</span>
+<span id="L44" class="LineNr">44 </span>        }
+<span id="L45" class="LineNr">45 </span>}
+<span id="L46" class="LineNr">46 </span>
+<span id="L47" class="LineNr">47 </span><span class="GruvboxYellow">signed</span> <span class="GruvboxGreenBold">main</span>()
+<span id="L48" class="LineNr">48 </span>{<span class="Comment">/*</span><span class="Comment">{{{</span><span class="Comment">*/</span>
+<span id="L49" class="LineNr">49 </span>#ifdef CLANG
+<span id="L50" class="LineNr">50 </span>        <span class="GruvboxGreenBold">freopen</span>(<span class="String">&quot;trade.in&quot;</span>,<span class="String">&quot;r&quot;</span>,<span class="GruvboxPurple">stdin</span>);
+<span id="L51" class="LineNr">51 </span>        <span class="GruvboxGreenBold">freopen</span>(<span class="String">&quot;trade.out&quot;</span>,<span class="String">&quot;w&quot;</span>,<span class="GruvboxPurple">stdout</span>);
+<span id="L52" class="LineNr">52 </span>#endif
+<span id="L53" class="LineNr">53 </span>        n = <span class="GruvboxGreenBold">read</span>(),w = <span class="GruvboxGreenBold">read</span>();
+<span id="L54" class="LineNr">54 </span>        <span class="GruvboxRed">for</span>(<span class="GruvboxYellow">int</span> i = <span class="GruvboxPurple">1</span>,u,v,value;i &lt; n;i++) {
+<span id="L55" class="LineNr">55 </span>                u = <span class="GruvboxGreenBold">read</span>(),v = <span class="GruvboxGreenBold">read</span>(), value = <span class="GruvboxGreenBold">read</span>();
+<span id="L56" class="LineNr">56 </span>                <span class="GruvboxGreenBold">add</span>(u,v,value),<span class="GruvboxGreenBold">add</span>(v,u,value);
+<span id="L57" class="LineNr">57 </span>        }
+<span id="L58" class="LineNr">58 </span>
+<span id="L59" class="LineNr">59 </span>        <span class="GruvboxGreenBold">dfs</span>(<span class="GruvboxPurple">1</span>,<span class="GruvboxPurple">0</span>);
+<span id="L60" class="LineNr">60 </span>        <span class="GruvboxGreenBold">printf</span>(<span class="String">&quot;</span><span class="GruvboxOrange">%lld</span><span class="String">&quot;</span>,f[<span class="GruvboxPurple">1</span>][w]);
+<span id="L61" class="LineNr">61 </span>
+<span id="L62" class="LineNr">62 </span>        <span class="GruvboxGreenBold">exit</span>(<span class="GruvboxPurple">0</span>);
+<span id="L63" class="LineNr">63 </span>}<span class="Comment">/*</span><span class="Comment">}}}</span><span class="Comment">*/</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
