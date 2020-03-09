@@ -6,22 +6,16 @@
   <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link href="main.css" type="text/css" rel="stylesheet">
-<script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
-<script>
+  <script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
+  <script>
     if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
       window.alert('IE is not supported on this page.')
     }
 </script>
-<style>
-@font-face {
-	font-family:zpix;
-	src: url('./Zpix.ttf');
-}
-</style>
 </head>
 <!--}}}-->
 
-<body background="https://cn.bing.com/th?id=OHR.AlbertaThanksgiving_ZH-CN5899007960_1920x1080.jpg">
+<body style="background-color: #E6E6FA">
   <!--{{{ header part-->	
   <header id = "webTitle">
     <div id = "divTop1">
@@ -56,6 +50,13 @@
       </span>
 
       <span>
+      <button type="button" class="nes-btn is-warning"
+	       onclick="window.open('https://tangyida.github.io/archives.html')">	
+	comment
+       </button> 
+      </span>
+
+      <span>
 	      <button type="button" class="net-btn is-warning"
 		      onclick="document.getElementById('dialog-send').showModal();">
               send to me!!!	
@@ -77,13 +78,14 @@
                 </form>
               </dialog>
       </span>
+
     </div>
   </header>
   <!--}}}-->
 
   <!--{{{article list-->
   <article id="main">
-    <div class = "nes-container with-title is-dark">
+    <div class = "nes-container with-title is-rounded container" style="margin:15px">
       <p class = "title">Table Of Contents</p>
       <ol start=0>
         <li><a href="https://www.luogu.org/blog/TangYida/" target="_blank">LuoguBlog</li>
@@ -272,8 +274,23 @@
 
       </ol>
     </div>
-    <div style="text-align: center">
-
+    <div class = "nes-container is-rounded with-title container" style="margin:15px">
+    	<p class = "title">Comments</p>
+	<div id="lv-container" data-id="city" data-uid="MTAyMC80OTAwMS8yNTQ5NQ==">
+		<script type="text/javascript">
+	   (function(d, s) {
+	       var j, e = d.getElementsByTagName(s)[0];
+	
+	       if (typeof LivereTower === 'function') { return; }
+	
+	       j = d.createElement(s);
+	       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+	       j.async = true;
+	
+	       e.parentNode.insertBefore(j, e);
+	   })(document, 'script');
+		</script>
+	</div>
     </div>
   </article>
   <!--}}}-->
