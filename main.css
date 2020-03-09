@@ -18,3 +18,36 @@ top:500px;
 blockquote {
 	font-family:ËÎÌו;
 }
+
+@font-face {
+	font-family:zpix;
+	src: url('./Zpix.ttf');
+}
+
+.container::before{    
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	background:url(https://cdn.thinglink.me/api/image/658225006207041537/1240/10/scaletowidth);
+	background-repeat:no-repeat;
+	background-size:cover;
+	filter:blur(10px);
+	z-index:-1
+}
+
+a {
+
+        position: relative;
+        display: inline-block;
+        outline: none;
+        text-decoration: none;
+        color: #000;
+        padding: 5px 10px;
+ }
+
+        a:hover::before, a:hover::after { position: absolute; }
+        a:hover::before { content: "\5B"; left: -20px; }
+        a:hover::after { content: "\5D"; right:  -20px; }
