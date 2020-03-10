@@ -21,7 +21,7 @@ blockquote {
 
 @font-face {
 	font-family:zpix;
-	src: url('./Zpix.ttf');
+src: url('https://solidzoro.com/zpix-pixel-font/zpix.woff2');
 }
 
 .container::before{    
@@ -44,10 +44,10 @@ a {
         display: inline-block;
         outline: none;
         text-decoration: none;
-        color: #000;
+        color: #104E8B;
         padding: 5px 10px;
  }
 
         a:hover::before, a:hover::after { position: absolute; }
-        a:hover::before { content: "\5B"; left: -20px; }
-        a:hover::after { content: "\5D"; right:  -20px; }
+        a:hover::before { content: "{"; left: -20px; }
+        a:hover::after { content: "}"; right:  -20px; }
