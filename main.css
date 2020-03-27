@@ -51,3 +51,5 @@ a {
         a:hover::before, a:hover::after { position: absolute; }
         a:hover::before { content: "{"; left: -20px; }
         a:hover::after { content: "}"; right:  -20px; }
+
+body {margin:50px;}
