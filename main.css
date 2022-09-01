@@ -21,7 +21,7 @@ blockquote {
 
 @font-face {
 	font-family:zpix;
-src: url('tangyida.github.io/Zpix.ttf');
+src: url('tangyida.github.io/zpix.ttf');
 }
 
 .container::before{    
