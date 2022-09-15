@@ -2,355 +2,117 @@
 <!--{{{ head part-->
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta charset = UTF-8 /> <title>TangYida's ugly blog</title>
-  <!--use NES.css MIT-->
+  <meta charset = UTF-8 /> <title>丑陋博客</title>
 
   <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-  <link href="./main.css" type="text/css" rel="stylesheet">
-  <script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
+  <link href="./main.css" type="text/css" rel="stylesheet"> <script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
   <script>
     if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
       window.alert('IE is not supported on this page.')
     }
-</script>
+   </script>
 </head>
 <!--}}}-->
-
-<body style="background-color: #E6E6FA;margin:50px;">
-  <!--{{{ header part-->	
-  <header id = "webTitle">
-    <div id = "divTop1">
-      <h2>
-        <span class = "nes-text">TangYida's ugly blog</span>
-      </h2>
-      <h2>
-        <span class="nes-text">By TangYida,Yali School</span>
-      </h2>
+<body class="container">
+  <header style="overflow:hidden;margin-top:5px;">
+    <div style="float:left">
+      <div style="font-weight:900;font-size:20px;">丑陋博客</div>
+      <div style="font-weight:900;margin-bottom:5px;">By TangYida,Fudan University; </div>
+      <div style="margin-bottom:15px;">------------------------------</div>
+    </div>
+    <div style="float:right">
       <span>
-         <button type="button" class="nes-btn is-primary"
-		 onclick="document.getElementById('dialog-search').showModal();">
-           search
+         <button type="button" onclick="document.getElementById('dialog-search').showModal();">
+		 搜索
          </button>
 
-         <dialog class="nes-dialog is-rounded" id="dialog-search">
+         <dialog id="dialog-search">
            <form method="dialog">
-             <p class="title">search</p>
-             <menu class="dialog-menu">
-               <button class="nes-btn">Cancel</button>
-	       <button class="nes-btn is-primary">Go!</button>
+             <p>搜索</p>
+             <menu>
+               <button>取消</button>
+	       <button>Go!</button>
              </menu>
            </form>
          </dialog>
       </span>
 
       <span>
-      <button type="button" class="nes-btn is-primary"
-	       onclick="window.open('https://tangyida.github.io/old.html')">	
-	old version
+        <button type="button"
+	      onclick="document.getElementById('dialog-comment').showModal();">	
+		评论
+        </button> 
+        <dialog id="dialog-comment" style = "width:500px;">
+          <form method="dialog">
+            <div style="float:left">评论</div>
+	    <div style="float:right"><button>x</button></div>
+  	    <div id="lv-container" data-id="city" data-uid="MTAyMC80OTAwMS8yNTQ5NQ==">
+  		<script type="text/javascript">
+  	   (function(d, s) {
+  	       var j, e = d.getElementsByTagName(s)[0];
+  	
+  	       if (typeof LivereTower === 'function') { return; }
+  	
+  	       j = d.createElement(s);
+  	       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+  	       j.async = true;
+  	
+  	       e.parentNode.insertBefore(j, e);
+  	   })(document, 'script');
+  		</script>
+          </form>
+        </dialog>
+
+      </span>
+
+      <span>
+      <button type="button"
+	      onclick="window.open('./old.html')">	
+	      怀旧版
        </button> 
       </span>
 
       <span>
-      <button type="button" class="nes-btn is-primary"
-	       onclick="window.scrollTo(0, 998244353);">	
-	comment
-       </button> 
-      </span>
-
-      <span>
-	      <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-send').showModal()">
-		  send to me
+	      <button type="button" onclick="document.getElementById('dialog-send').showModal()">
+		      发邮件
 	      </button>
-              <dialog class="nes-dialog is-rounded" id="dialog-send">
+              <dialog id="dialog-send">
                 <form method="dialog">
                   <h2>send e-mail to TangYida.</h2>
-
-		  <p>TangYida is so lazy.He didn't add comment</p>
-		  <p>system to his ugly blog.If you wanna DIAOCAI</p>
-		  <p>him,please send e-mail.</p>
-
+		  <p>If you wanna chat him</p>
+		  <p>please send him an e-mail.</p>
                   <a href="mailto:tang361313182@outlook.com?subject=Hi,TangYida&body=write something...">
-       		  <h2>SEND!</h2></a>
+			  SEND!</a>
 
                   <menu class="dialog-menu">
-                    <button class="nes-btn">Cancel</button>
+                    <button>Cancel</button>
                   </menu>
                 </form>
               </dialog>
 	</span>
-
     </div>
   </header>
-  <!--}}}-->
-
-  <!--{{{article list-->
   <article id="main">
-      <ol start=0>
-
-        <li><a href="https://www.luogu.org/blog/TangYida/" target="_blank">LuoguBlog</a></li>
-
-        <li><a href="C1ProblemsWorthDoing1.html">ProblemsWorthDoing1</a>
-	<div class = "nes-badge" style="text-align:right"><span class="is-primary">unknown</span></div>
-	</li>
-
-        <li><a href="C2ProblemsWorthDoing2.html">ProblemsWorthDoing2</a>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">unknown</span></div>
-	</li>
-
-	<li><a href="C3ContestSummary.html">ContestSummary</a>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">summary</span></div>
-	</li>
-
-	<li><a href="C4ContestSummary2.html">ContestSummary2</a>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">summary</span></div>
-	</li>
-
-	<li><a href="C5TanFeiMianYang.html" style="font-family:zpix">弹飞绵羊</a>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">block</span></div>
-	</li>
-
-	<li><a href="C6RandTree.html" style="font-family:zpix">随机树</a>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">expection</span></div>
-	</li>
-
-	<li><a href="C7Graph.html">graph</a>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">greedy</span></div>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">union-find</span></div>
-	</li>
-
-	<li><a href="C8Sakura.html">Sakura</a>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">tarjan</span></div>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">v-dcc</span></div>
-	</li>
-
-	<li><a href="C9MeetingInRoad.html" style="font-family:zpix">道路相遇</a>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">tarjan</span></div>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">v-dcc</span></div>
-	</li>
-
-	<li><a href="C10Cloudy.html">10.14Contest</a>
-	<div class="nes-badge" style="text-align:right"><span class="is-primary">summary</span></div>
-	</li>
-
-	<li><a href="C11TreeProblemsInNoip.html" style="font-family:zpix">Noip中的树上问题：赛道修建与疫情控制</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">greedy</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">dp</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">multiplication</span></div>
-	</li>
-
-	<li><a href="C12SwitchProblem.html">Switch Puzzle</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">gauss-jordan</span></div>
-	</li>
-
-	<li><a href="C13ContestSummary10-21.html">Contest Summary 10-21</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">greedy</span></div>
-	<div class="nes-badge" style="text-align:right">
-	        <span class="is-primary">segment-tree</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">bitset</span></div>
-	</li>
-
-	<li><a href="C14MosAlgorithmIntroduction.html">Introduction to Mos Algorithm</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">Mos-Algorithm</span></div>
-	</li>
-	<li><a href="C15MatrixDP.html">PZk's Matrix DP</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">Matrix-DP</span></div>
-	</li>
-
-	<li><a href="C16Slowset.html">Slowset</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">set</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">multiplication</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">LCA</span></div>
-	</li>
-
-	<li><a href="C17国庆练习.html" style="font-family:zpix">国庆练习</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">DP</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">D&C</span></div>
-	</li>
-
-	<li><a href="C18Badwolf.html">Badwolf</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">search</span></div>
-
-	<li><a href="C1910-2校内测试.html" style="font-family:zpix">11-2校内测试</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">Comb</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">DP</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">math</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">Segment-tree</span></div>
-
-	<li><a href="C2010-3联考.html" style="font-family:zpix">11-3XJOI联考</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">kruskal</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">greedy</span></div>
-	</li>
-
-	<li><a href="C21Plan.html" style="font-family:zpix">计划</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">unknown</span></div>
-	</li>
-
-	<li><a href="C2211-6_11-7Test.html" style="font-family:zpix">11.6&11.7测试</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">DP</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">multiplication</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">tarjan</span></div>
-	</li>
-
-	<li><a href="C2311-9Test.html">11-9 test</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">greedy</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">DP</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">BFS</span></div>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">kruskal</span></div>
-	</li>
-
-	<li><a href="C24KMP.html">easy KMP</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">KMP</span></div>
-	</li>
-
-	<li><a href="C25count.html" style="font-family:zpix">CSP倒数</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">unknown</span></div>
-	</li>
-
-	<li><a href="C26Saying.html" style="font-family:zpix">一些话</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">unknown</span></div>
-	</li>
-
-	<li><a href="C28AFO.html" style="font-family:zpix">退役</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">unknown</span></div>
-	</li>
-
-	<p> </p>
-
-	<li><a href="C29CulturalLife.html">Cultural Life</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">unknown</span></div>
-	</li>
-
-	<li><a href="C30Untitled.html">无题</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">unknown</span></div>
-	</li>
-
-	<li><a href="C31Earth.html" style="font-family:zpix">地球在转动</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-	<li><a href="C32Conversation.html" style="font-family:zpix">上帝和规则之间的对话</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-	<li><a href="C33nonsense.html" style="font-family:zpix">关于C32的废话</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-	<li><a href="C34Baoyu.html" style="font-family:zpix">悲与我无关的宝玉</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-	<li><a href="C35Afternoon.html" style="font-family:zpix">宫殿午后</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-	<li><a href="C36Eve.html" style="font-family:zpix">感夜雨作</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-	<li><a href="C37RedMansion.html" style="font-family:zpix">读红楼梦</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-	<li><a href="C38CeungYou.html" style="font-family:zpix">在秦峪做客</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-	<li><a href="C39Spring.html" style="font-family:zpix">春天原来是香的</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-	<li><a href="C40East.html" style="font-family:zpix">东君的梦</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-	<li><a href="C41MoonShip.html" style="font-family:zpix">月亮船</a>
-	<div class="nes-badge" style="text-align:right">
-		<span class="is-primary">works</span></div>
-	</li>
-
-
-      </ol>
-    	<p class = "title">Comments</p>
-	<div id="lv-container" data-id="city" data-uid="MTAyMC80OTAwMS8yNTQ5NQ==">
-		<script type="text/javascript">
-	   (function(d, s) {
-	       var j, e = d.getElementsByTagName(s)[0];
-	
-	       if (typeof LivereTower === 'function') { return; }
-	
-	       j = d.createElement(s);
-	       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-	       j.async = true;
-	
-	       e.parentNode.insertBefore(j, e);
-	   })(document, 'script');
-		</script>
+   <script src="build.js"> </script>
+   <script>
+	articleList.forEach(
+		(item) => {
+			var passage = document.createElement('div');
+			passage.innerHTML = '* <a href="' + item + '.html" class="passage">' + item + '</a>';
+			document.getElementById('main').appendChild(passage);
+		}
+	);
+   </script>
   </article>
-  <!--}}}-->
-
-  <!--footer part{{{-->
-  <footer>
-    <span class="nes-text is-success">
+  <footer style="position:absolute;bottom:15px;">
+   <div style="margin-top:15px;">------------------------------</div>
+   <span style="font-weight:800;">
       powered by:	    
       <a href="https://github.com/TangYida/TangYida.github.io">github</a>
-      theme:
+      several style from:
       <a href="https://github.com/nostalgic-css/NES.css">NES.css</a>
-      comment:
+      review system:
       <a href="https://livere.com">LIVERE</a>
-
-      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-      <span id="busuanzi_container_site_pv">  visited: <span id="busuanzi_value_site_pv"></span> times</span>
-
     </span>
   </footer>
-  <!--}}}-->
 </body>
-
-</html>
-

@@ -4,7 +4,7 @@ code {
 
 @font-face {
 	font-family:zpix;
-	src: url('./Zpix.ttf');
+	src: url('./zpix.ttf');
 }
 @font-face {
 	font-family:backup;
@@ -30,14 +30,14 @@ a{color:#808080;}
 a:hover{color:black;}
 .passage{margin-bottom:10px;}
 .passage:hover::before, .passage:hover::after { position: absolute;}
-.passage:hover::before { content: "{"; left: -10px;}
-.passage:hover::after { content: "}"; right:  -10px; }
+.passage:hover::before { content: "{"; left: -5px;}
+.passage:hover::after { content: "}"; right:  -5px; }
 
 .container {
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
-	font-family:zpix,backup,Courier;
+	font-family:zpix,SimSong-Regular,STFangsong,Courier;
 	font-size:14px;
 	padding:15px;
 }
