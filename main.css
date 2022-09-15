@@ -2,54 +2,43 @@ code {
 	font-family:"Consolas",monospace
 }
 
-.home {
-	float:right;
-top:500px;      
-}
-/*FIXME*/
-.mtext {
-	font-family:¿¬Ìå;
- 	margin: 0 auto;
-	margin-left: auto;
-	margin-right: auto;	
-	top:50;
-}
-
-blockquote {
-	font-family:ËÎÌå;
-}
-
 @font-face {
 	font-family:zpix;
-	src: url('http://tmotmo.gitee.io/blog/Zpix.ttf');
+	src: url('./Zpix.ttf');
+}
+@font-face {
+	font-family:backup;
+	src: url("https://tmotmo.gitee.io/blog/Zpix.ttf")
 }
 
-.container::before{    
-	content:'';
-	position:absolute;
-	top:0;
-	left:0;
-	right: 0;
-	bottom: 0;
-	background:url(https://cdn.thinglink.me/api/image/658225006207041537/1240/10/scaletowidth);
-	background-repeat:no-repeat;
-	background-size:cover;
-	filter:blur(10px);
-	z-index:-1
-}
+ button {
+	 background-color:white;
+	 font-weight:800px;
+ }
 
-a {
+.passage {
 
         position: relative;
         display: inline-block;
         outline: none;
         text-decoration: none;
-        color: #104E8B;
-        padding: 5px 10px;
+        color: black;
+        padding: 1px 1px;
  }
 
-        a:hover::before, a:hover::after { position: absolute; }
-        a:hover::before { content: "{"; left: -20px; }
-        a:hover::after { content: "}"; right:  -20px; }
+a{color:#808080;}
+a:hover{color:black;}
+.passage{margin-bottom:10px;}
+.passage:hover::before, .passage:hover::after { position: absolute;}
+.passage:hover::before { content: "{"; left: -10px;}
+.passage:hover::after { content: "}"; right:  -10px; }
 
-body {margin:50px;}
+.container {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family:zpix,backup,Courier;
+	font-size:14px;
+	padding:15px;
+}
+
