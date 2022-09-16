@@ -4,17 +4,16 @@ code {
 
 @font-face {
 	font-family:zpix;
-	src: url('./zpix.ttf');
+	src: url('./Zpix.ttf');
 }
 @font-face {
 	font-family:backup;
-	src: url("https://tmotmo.gitee.io/blog/Zpix.ttf")
+	src: url('./Zpix.woff2');
 }
-
- button {
+button {
 	 background-color:white;
-	 font-weight:800px;
- }
+	 font-weight:900px;
+}
 
 .passage {
 
@@ -37,7 +36,7 @@ a:hover{color:black;}
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
-	font-family:zpix,Song,SimSong-Regular,STFangsong;
+	font-family:zpix,backup,Courier New,Song,SimSong-Regular,STFangsong;
 	font-size:14px;
 	padding:15px;
 }

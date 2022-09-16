@@ -4,8 +4,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset = UTF-8 /> <title>丑陋博客</title>
 
-  <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
-  <link href="./main.css" type="text/css" rel="stylesheet"> <script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
+  <link href="./main.css" type="text/css" rel="stylesheet"> 
   <script>
     if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
       window.alert('IE is not supported on this page.')
@@ -18,9 +17,9 @@
     <div style="float:left">
       <div style="font-weight:900;font-size:20px;">丑陋博客</div>
       <div style="font-weight:900;margin-bottom:5px;">By TangYida,Fudan University; </div>
-      <div style="margin-bottom:15px;">------------------------------</div>
     </div>
-    <div style="float:right">
+    <div style="float:right;
+		font:zpix,backup,Courier New,Song;">
       <span>
          <button type="button" onclick="document.getElementById('dialog-search').showModal();">
 		 搜索
@@ -92,20 +91,19 @@
 	</span>
     </div>
   </header>
-  <article id="main">
+  <article id="main" style="margin-top:20px;margin-bottom:20px;">
    <script src="build.js"> </script>
    <script>
 	articleList.forEach(
 		(item) => {
 			var passage = document.createElement('div');
-			passage.innerHTML = '* <a href="' + item + '.html" class="passage">' + item + '</a>';
+			passage.innerHTML = '<a href="' + item + '.html"class="passage">*&nbsp' + item + '</a>';
 			document.getElementById('main').appendChild(passage);
 		}
 	);
    </script>
   </article>
-  <footer style="position:absolute;bottom:15px;">
-   <div style="margin-top:15px;">------------------------------</div>
+  <footer >
    <span style="font-weight:800;">
       powered by:	    
       <a href="https://github.com/TangYida/TangYida.github.io">github</a>
