@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>猫</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, ‘Palatino Linotype‘, Times, ‘Times New Roman‘, serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: ‘courier new‘, monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h3 id="猫">猫</h3>
+<p>在初中毕业后的那个暑假行将结束，一段新的高中时光即将开始的时候，在某一个普通的夜里，我的家人突然向我提起了鸣秋。“鸣秋啊，你的小学同学，不记得了吗？我可还记得当初你们班上好多男生喜欢她呢，真的搞不懂为什么。”，他们说，“到学校里了，两个人要记相互照应，你们俩毕竟还是熟人。”我觉得摸不着头脑。我一时想不起有过这位女同学，好像有这人，但是又记得不真切。–其实你会发现，过去的一切有时候只不过是一个遥远的童话。</p>
+<p>在那个暑假最后那几天，开学给我带来的激动，就像是很久以前，我年纪非常非常小的那会儿，在得知明天就要和爸爸妈妈出去旅行时的那种激动。</p>
+<p>开学之后，我一个人住到了劳动西408号里的一间出租屋里。我不想要父亲或母亲过来陪我住，他们过来只会让我更烦。我从来没有见过这么高的公寓楼；两年之后，我却发现，和这个世界上的很多东西很多人一样，它的高度是一个谎言。我住的那间出租房又旧又小，黑暗潮湿，而温暖的阳光永远照不到这间小破屋；当我推开窗户，扑面而来的则是对面蜂巢一样的一排排的窗户、门和走廊，像是一层阴冷的墙壁。不过习惯了就好，窗外面这块黑乎乎的景色的最大优点就是靠谱；两年之前你觉得它们陌生而悲哀，两年之后你还是觉得它们又陌生又悲哀。习惯了就好。</p>
+<p>时间这东西真他妈的好笑，它最擅长开玩笑。离那一次开学已经过去两年了，我也已经上了两年课、起了两年早床了，在这两年的时光里，从小到大读书时的一些陈旧的感觉每天都会无耻地涌上心头。时间真的懂得黑色幽默，他不仅让我周围的所有人都相信“一段新的生活又开始了”，甚至也还让我激动了好一会；但事实是，三年前你要干的事情和三年后你要干的事情是一样的，尽管你的身份可能变了，尽管别人叫你的称呼变了。但是你依然是那一个无聊的你。</p>
+<p>当然也不是所有东西都一如既往。比如我身边的情侣变得比以前多了，比如我要做的试卷变难了，比如我听说鸣秋中途退学了。再比如，我从来没有看见哪里的猫比我们学校里的更多。我不知道这么多小东西是哪里来的，反正它们就像是雨后的蘑菇一样，只要有了太阳，它们在每个角落都可以冒出来；当然这蘑菇是五颜六色的。教学楼的台阶上面，种满梧桐树的道路两侧，大理石台子上，有时候甚至是一株像是挂满了果实的树上面。到处都是它们。猫确实是一种很可爱的东西。</p>
+<p>每一年的一些时候，天气也偶尔会改变一下他那一张百无聊赖的臭脸。这是我高三的第一个秋日。在这些日子，我开始怀疑我正在疲于应对的一些事情不过是媚态和徒劳。我开始在自己的蜂窝小破房里的那面黯淡的镜子中端详自己的脸：变瘦了，颧骨几乎凸了起来；长了更多青春痘，搞得我的瘦脸黑一块红一块；两只眼睛病态地凸出了，我几乎像是一条在陆地上苟活了许多年的金鱼。我开始不再想待在那间教室，里面的人似乎都非常陌生；而我回来时面对的却只有这样的自己。生活复杂、无聊而疲劳。</p>
+<p>暂时值得庆幸的是，今天的天气非常宜人。我知道这又是时间给我开的一个玩笑。但不能否认，八月份的这几天是一年中再也没有的好日子。我中午走出教学楼，看见了远远的一片灿蓝的天空，真他妈远啊。有的时候我怀疑夏天的风是马路上汽车尾气管排出来的，但今天的风一定是从天上吹下来的，是从更高的云上面吹下来的。</p>
+<p>今天中午我决定去那个地方。</p>
+<p>去的路上，两旁高大的梧桐树已经有几片树叶落到了地上，树上茂盛的叶子却依然随着风起伏。那种声音可以掩盖过一切的悲伤。路上当然不可避免地要路过操场，不过也不能怪那些情侣，这种天气的操场就是给他们准备的。坐在草坪上面的他们看上去很幸福。我想尽管他们中的大多数人也很无聊，但他们看上去确实很幸福。</p>
+<p>我也不知道我为什么这么喜欢那个地方，或许是因为它是所有伤口中最安静美丽的一个吧。东南角的小花园到了。像往常一样，阳光透过树林洒在白色的大理石台上，那只白色小猫依旧穿着黑色的花纹，躺在石台上面。只是，今天石台的旁边多了一个女孩子。</p>
+<p>她穿着一身月白色的长裙，正在低头温柔地抚摸那只小猫。也许，因为太专注了，她不会注意到还有一个人在她旁边。</p>
+<p>小猫眯着眼躺在阳光底下，这时已经把它白色的肚子露了出来。但齐肩的黑发却掩住了这位女孩子的侧脸，让我看不出她是谁。而且我几乎不敢多看她一眼。</p>
+<p>“真是个小毛孩”，她说，“看样子你好舒服啊。”</p>
+<p>这一切太扯了。可能是因为她的这句话，也可能是因为我闻到了她身上的香味，有关过去的一切回忆如同凭空产生，一下子回到了我的脑海中。美丽的双眼，冲动的誓言，洒满余晖的回家的路，一把漂亮的太阳伞······这一切深邃而美丽。我不确定这回忆是不是我的，但我确定她就是鸣秋。</p>
+<p>旁边的桃树上结满了果子，沉甸甸的阴影洒在鸣秋的身上。喃喃自语的她就像是一只小猫。猫为什么可爱呢？因为它们总是独来独往，但是从它们眯着的眼睛和不时动一下的小耳朵中，你可以看出它们是那么惬意于独居生活。可悲的是，我们只是人类，我们永远也不可能像猫那样，我们只能暂时成为猫。</p>
+<p>“你也在这里啊！”我多希望能够给她一点久违的安慰——几乎就要喊出来了——但是我一向引以为傲的理智马上改变了一切。我知道鸣秋早就因为抑郁症退学了，为这件事情我曾经伤心了两个月；即使她依然在学校里面，我也不能就此确定她是鸣秋。虽然和一个陌生的同学打招呼还算正常，但也仅仅只是正常，却没有必要。我想多了，她不是鸣秋。尽管她可能是鸣秋。</p>
+<p>过了不久，她站起身，从另一条小道离开了花园。我看着她的身影渐渐模糊，最后消失在寂静中。就像“鸣秋”这两个字消失在我心里一样的寂静无声。</p>
+<p>当我低下头，发现地上落下了她的胸牌。似乎在我的意料之内，胸牌上写有“鸣秋”二字。你他妈的真不争气——我几乎要哭出来了——不知道是从什么时候开始，我再也无法确定我是不是在爱一个人。</p>
+</body>
+</html>
