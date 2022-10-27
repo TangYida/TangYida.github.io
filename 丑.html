@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>丑</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, ‘Palatino Linotype‘, Times, ‘Times New Roman‘, serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: ‘courier new‘, monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h3 id="丑">丑</h3>
+<p>今天我唯一的希望就是手机不要震动。</p>
+<p>我是一名落魄的诗人。文思枯竭，面相丑陋。失业，没钱，靠领救济金过活。唯一的财产是一只酒瓶子。</p>
+<p>手机千万不要震动。这是我今天唯一的希望。手机震动，桌子跟着一起动，我搁在桌子上面的手也开始颤抖，震动顺着我这只该死的狗脚传到心脏，最后它开始无助地猛跳。行行好吧，流量先生，哪怕扣完我的流量钱都可以。现在我的桌子上面摆着一张可爱白净的纸，今天虽然还没有动一笔，但是它看上去非常漂亮，就像一片未开垦的处女地，就像年轻女孩的白色大腿，就像秋天丰收的大地，就像女孩子的眼神和裸体。到现在为止，酒精还没有沾染上我的唇齿。现在多美丽啊！手机先生，在那之前我真的想把你砸得粉碎！现在我有一张纸，也许我还有工作——就是把一张白纸寄给偶尔失明的编辑们，然后等着它被原封不动地送到我的手上。······乖，绝望而又乖顺地等着吧，每周接一次电话是你的命运。你永远也改变不了的命运——除非你们两个人中间有一个去死。命运。我这几年在几张白纸上面只写过两个字，“命运”。</p>
+<p>下午六点，秒钟挣扎着响了最后一下。手机开始震动。</p>
+<p>我搬起手机，手机里出现一个中年女人的脸，令我的胸膛又骚动了一阵。然后我乖巧地像一只小猫一样喊了一声“妈”，再从颧骨里挖出一点笑意挤出一张笑脸。真不知道这种声音和笑脸是怎么由一个人表演出来的。“宝贝儿子！”笑脸开始荡漾在中年女人的脸上。</p>
+<p>我无力地维持着笑容。</p>
+<p>“你的镜头怎么在晃动？我这样看着真不舒服。把镜头定下来，让我来看看我家儿子帅气的脸。”</p>
+<p>我把手机架在桌子上，把身体往后面靠，摆出一副遥远的笑脸。我这张脸已经不知道有多久没洗过了。头发也不知道有多久没洗过了。</p>
+<p>“对，就是这样——但是你那边信号好像有点差。”</p>
+<p>“我在办公室外面。怕吵到同事。”</p>
+<p>“同事们还在睡觉吧。真好，这样就不打扰到别人了。”</p>
+<p>“嗯。”</p>
+<p>“今天比赛展示得怎么样？小达带领下的团队项目是不是拔得头筹呢？”</p>
+<p>“输了。”</p>
+<p>我是小达，我只知道小达没有参加比赛，而且领着一个月一千三的救济金。这个比赛的结果到底是什么我不知道。只是比赛天天都有，我天天都会输。</p>
+<p>“你听上去好像不开心。”</p>
+<p>“没有。”</p>
+<p>“儿子，没关系，妈妈永远相信你。本来能找到这个工作妈妈已经很开心了。我为你感到骄傲，儿子。”</p>
+<p>“不担心，我还好。”</p>
+<p>手机中的她突然把笑容收起来。我吓了一下。幸好她只是靠近把脸凑近了镜头，估计是要讲什么秘密了。“跟你说啊，”然后刻意压低声音，“轩轩最近找了一个女朋友——他们好像要订婚了呢。”</p>
+<p>“不错啊。”我感觉她的脸就要贴上我了，我的心脏几乎要不受我控制了，我真贱，“消息还挺灵通。”</p>
+<p>“跟你说啊，妈妈的消息向来很灵通的，只是最近不知道为什么在你那儿不灵了。我到现在都没有你一个同事的电话。之前跟你说过多少遍了，妈妈如果没有你周围人的电话，要是出了什么急事联都联系不上······”</p>
+<p>“啊，我记得了。不小心又忘了。我待会发给你。”</p>
+<p>“不行，现在就发。”</p>
+<p>“对。那好，我现在就发。”</p>
+<p>“在发吗？”</p>
+<p>“现在在找······让我看一下我们群里面有没有通讯录。”</p>
+<p>“没事，慢慢找。”</p>
+<p>“儿子你应该也有什么好消息告诉妈妈吧。”</p>
+<p>“没有，怎么可能？”</p>
+<p>“真的吗——真的吗——我帅气的儿子怎么会没有？”</p>
+<p>“没有。”</p>
+<p>“是不是小侦？”</p>
+<p>“不是。”</p>
+<p>“是不是一个武汉人？”</p>
+<p>“不是。”</p>
+<p>她开始不说话了，发出啧啧的声音。她那一张又老又肥的脸上的每根皱纹都挤满了不满，目光中充满了刺探不得的气恼与失去权力的恐惧，我想吐，我爱她。</p>
+<p>她真是一个好妈妈，我永远爱她：她给了她儿子自由而高雅的教育，把他送进了一个“世界五百强企业”，还给了他贵族般的品格，让他一想到与女人手挽手走路就犯恶心。但是他私底下却做了很多自以为的逃跑了，尽管他不明白这些逃跑甚至连背叛都叫不上。看到她的胸部肥大而松垮，肚子被她努力得只剩下最后一点肥肉，我的内心直颤。妈妈的，该死的俄狄浦斯。妈妈，我永远永远是你的乖儿子！俄狄浦斯，要是你自杀成功就好了，你为什么不死呢？！</p>
+<p>手机中的中年妇女又准备说话了。突然，画面卡住，视频电话挂断，我的流量终于用完了。</p>
+<p>这个时候报纸和信件也一起送过来了。报纸上面没有我的文章，信封里有的是我被退回的文章。我就像在族群纷争中失去交配权的公兽，就像在为未婚妻的决斗中被砍掉头的骑士。我突然觉得今后在白纸上面就算写一两个字也是不可能的了，就像，有时只是想撸一发，却发现自己连勃都勃不起来。</p>
+<p>不行，男人，你是一个真男人，你是一个不需要妈妈的男人。酒是男人倒数第二个尊严。酒去哪里了？我的酒去哪里了？一个月救济金高达一千三。我没酒了。</p>
+<p>我原来一直以为，除了一只空了很久的酒瓶之外，我什么都没有。现在我才发现，我其实还有一件东西。那是一个原则：有的东西我会接受，而有的东西我不会接受，至少我不会让自己清醒地看着自己接受。</p>
+<p>下午六点三十分，我清醒过来了。我听到下沉到城市底端的那些声音透过了地下室的窗户。无数个工地的轰鸣声从远方传来，红色和黄色的吊塔在天边不知疲劳地转来转去。矮小的灌木立在立交桥边上，今天似乎安静的很。一辆辆汽车压过马路上的积水，呼啸着离开。有的时候你只要仔细听，就可以听到这个城市的呼吸声，还可以在脑海中描绘出这一座城市的样子。我原来一直觉得这呼吸声生生不息，今天才发现其中充满了疲惫，每一个人都在努力呼吸着，却发出了步调一致的声音，听着其中充满了不能接受的节奏。</p>
+<p>而我呢？我也跟他们没什么两样。</p>
+</body>
+</html>
