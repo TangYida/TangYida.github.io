@@ -96,8 +96,27 @@
    <script>
 	articleList.forEach(
 		(item) => {
-			var passage = document.createElement('div');
-			passage.innerHTML = '<a href="' + item + '.html"class="passage">*&nbsp' + item + '</a>';
+			var passage = document.createElement('div') , name =
+				"" , time = "";
+			if(typeof item == "object") {
+				name = item[0];
+				time = '/*Last modified:' + item[1] + '*/';
+			} else name = item;
+
+			passage.innerHTML = '<a href="' + name +
+				'.html"class="passage">*&nbsp' + name +  '</a>';
+			passage.onmousemove = function () {
+				this.innerHTML = '<a href="' + name +
+					'.html"class="passage">*&nbsp' + name +
+					'&nbsp' + time +
+					'</a>';
+			}
+			passage.onmouseout = function () {
+				this.innerHTML = '<a href="' + name +
+					'.html"class="passage">*&nbsp' + name +
+					'</a>';
+			}
+
 			document.getElementById('main').appendChild(passage);
 		}
 	);

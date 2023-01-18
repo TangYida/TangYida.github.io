@@ -27,10 +27,10 @@ button {
 
 a{color:#808080;}
 a:hover{color:black;}
-.passage{margin-bottom:10px;}
+.passage{margin-bottom:10px;--time:"";}
 .passage:hover::before, .passage:hover::after { position: absolute;}
 .passage:hover::before { content: "{"; left: -5px;}
-.passage:hover::after { content: "}"; right:  -5px; }
+.passage:hover::after { content: "}" ; right:  -5px; }
 
 .container {
 	max-width: 800px;
