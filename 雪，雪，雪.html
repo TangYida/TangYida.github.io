@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>雪，雪，雪</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, ‘Palatino Linotype‘, Times, ‘Times New Roman‘, serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: ‘courier new‘, monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="雪雪雪">雪，雪，雪</h1>
+<p>从学校走到我马路对面的出租房，要先穿过学校长长的林荫道，出了校门口，走到地下通道里面，然后又走上来，经过一条小街——那里左右排着几家饭店，都是学生们平常爱去的一些地方——走到尽头，右手边是一条更长、更安静的林荫道，左手边就是我住的小区了。如果一年有两百天在上学，高中想要毕业，这条路就得走三千六百遍。</p>
+<p>家对面的那条林荫道我没有进去过，只听说有点岁月了，通向几处老社区。每年里面都住着我们学校的许多学生。早上赶着上学，我经常在走出小区的时候看见三三两两的学生踩着树荫向外走。</p>
+<p>旷野是我的高中同学。平常不怎么学习，但是成绩非常好。每天晚自习他闲得发慌，就在一个本子的一张纸上写写画画。我问他在干嘛，他说他是在写信。这个本子剩的页数越来越少，我也没有看见他把本子给别人。他说他学乖了，吸取了失败的教训。</p>
+<p>高三上学期的那个冬天，长沙下了一场非常大的雪。晚上，高三学生自愿自习，我也冒着雪来到教室。在教室里坐了两小时三十五分后，旷野走到了我桌边，拍了拍我的桌子。</p>
+<p>“走不走？”</p>
+<p>“还没下自习啊，才九点。”</p>
+<p>“现在谁管啊？波波今天来转了一下就走了，现在估计已经在家里陪着两个小屁孩烤火了。你看现在还剩几个？”</p>
+<p>“什么是高三学生的定力？不要因为下雪了就心浮气躁，特别是你。”</p>
+<p>我笑了笑。他拍了一下我。</p>
+<p>“别放屁了。待会儿你在教室外面等我一下，我收书包要一点时间。“</p>
+<p>我带着书包到走廊外面等旷野。走廊的地又湿又滑，每一个教室门口稀稀落落放了几把伞，靠近栏杆的长椅已经湿透了。旷野推开门滑了出来。</p>
+<p>我看见他也背了一个很大的书包，说：“寒假回去都要搞卷是吧？”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>他拿起伞，看见隔壁班门口走出来一男一女，走了过去。女生我只知道叫黄芷沐，每次考完月考，很多同学都会像记者一样，先刺探完旷野的成绩，再刺探她的成绩；男生我也不太认识，只知道大家喜欢叫他“罗教授”。</p>
+<p>“这不是罗教授吗，”旷野已经笑眯了眼，“老师都走了，学生这不作鸟兽散？”</p>
+<p>我看见“罗教授”和黄芷沐的伞挨在一起。那个时候我觉得黄芷沐真漂亮。齐肩的整齐的黑发，校服里面一件纯米黄色的无帽卫衣，草莓形状的发卡别在领口上面，黑色的高帮匡威鞋。你和一个人甚至连话都没有说过，一些简单的东西却能够让你记住那个时刻的那个人。你在走廊上面看到了一个素不相识的女生，你们简简单单地打了个照面，你们可能还共过一段路，然后各回各家，依旧素不相识，但是她的一头黑发，一个侧脸，或是一秒的眼神，却停在了你的记忆里面。</p>
+<p>黄芷沐笑了笑。男生挥着伞过来打旷野，旷野急忙忙躲到了我身后。黄芷沐笑着说：“好学生旷野不也先离岗了吗？今天雪下这么大，可能适合早点回家吧。”</p>
+<p>“我和汤翼达刚要开溜，”罗教授想要把旷野揪出来，旷野忙不迭说，“走，我们正好一起回家。”</p>
+<p>黄芷沐点了点头：“那好，一起走吧。”</p>
+<p>“汤翼达，”旷野问我，“你说‘下雪’和适合早点回家有什么必然联系吗？”</p>
+<p>我和旷野勾着肩搭着背，地下的楼梯一片漆黑，只能听见脚踩在水渍上面的声音。这种声音总让我觉得像是在犹豫地填涂答题卡上最后一个选项。</p>
+<p>“没有，不对，有有有——最近教室里的同学们好吵，讲话的讲话，打雪仗的打雪仗，这种环境对于卷王非常不友好。”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>“卷王竟在我身边。”</p>
+<p>“旷野你就是欠揍。”罗教授说，但是我看不见他在哪。我也看不清楚黄芷沐的微笑。</p>
+<p>楼道里真黑，我们经过了三层，经过了两层，经过了一层。高一高二的教室早就黑了，因为他们还有的是时间玩，整个楼梯间只剩下绿色的“安全出口”在那里亮着。</p>
+<p>我们走出了教学楼，走到教学楼前面高高的的十八级台阶上，面前就是空旷的前坪。已经铺上了白色的积雪。远处，街对面的天空依旧往日一样浑浊，还有一点迷蒙。稍近一点的那幢早就不白的白楼在眼中非常高大，后面立着几排高楼的黑色的身影，一排排小灯亮着，它们就像是夜空底下悬着的几条烟熏肉。过了前坪，就是学校的林荫道。操场上面也积满了雪，在林荫道的树的右边徐徐展开。</p>
+<p>旷野已经在和罗教授吐槽起今天数学考试的题目了。</p>
+<p>“波波真的没有马<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>,放假之前非要给我们送一个这样的新年礼物。”</p>
+<p>“我们两个班卷子是一样的吗？有没有修水库那道题？”</p>
+<p>“啊就是那道题……”</p>
+<p>“这样的试卷，旷野应该动都不要动脑子吧？”</p>
+<p>“今天谁有心思写啊。晚上就可以卷铺盖走人了，况且窗外还下着这么大的雪。谁有心思写嘛。”</p>
+<p>“你们这个时候就别讨论卷子了。”黄芷沐说，“你们看看四周，树枝几乎要被雪压弯到地面上了。”</p>
+<p>旷野和罗教授不做声了。我们几个并排走着，鞋子踩在路上发出咯吱咯吱的声音，走起路来得小心点。我呼吸着四周冷冽的空气。</p>
+<p>不一会，旷野就向我们扔起了雪球；再过一会，他和罗教授就开始打起了雪仗，两个人在林荫道里面追追赶赶。安静的林荫道一下子就不安静了。</p>
+<p>他们往前跑，到了校门口就已经不见了踪影。再次看见旷野时，他正一个人站在地下通道入口等我们，罗教授已经回家了。一个中年女子正在通道的出口张望。几个大人也站在中年女子的身后，谈着天，搓着手，跺着脚。旷野的妈妈笑着迎了上来。我们打了招呼。</p>
+<p>“我自己又不是背不动，”旷野对中年女子大声说着，转身对我们说，“提前祝你们新春快乐！”</p>
+<p>他挥了挥手，正要上车，又回过头，望着黄芷沐：“那明年见！虽然过不了多久就得被关回来了……”说罢，他才上车。</p>
+<p>走到小街里，右边还有几家店子正发出一些微弱的灯光，店铺门口的雪都被主人们打扫干净，只剩下了一些积水，路上的雪也都快要结冰了。道路左边是小区的一排高高的铁护栏，四周只有他们在头顶的尖刺上顶着积雪，就像戴上了一顶顶白色的高高的帽子，在那里列队站岗。</p>
+<p>“翼达，你住在左边那个小区吗？”</p>
+<p>“对啊，”我正惊讶她什么时候知道了我的名字，“你住哪里？”</p>
+<p>“香隆桥社区你知道吗”</p>
+<p>“右手边那个巷子通进去就是吧？”</p>
+<p>“是的。”</p>
+<p>“奇怪，感觉上学放学从来没有遇到过你。”</p>
+<p>“真的吗？”</p>
+<p>“我印象中应该是的。”</p>
+<p>“可能就是这么奇怪吧。只有认识一个人之后你才会在人群中看见他。我一直都不认识你呢。”</p>
+<p>“你和旷野是同班同学吧？”</p>
+<p>“是啊。怎么……”</p>
+<p>“你有没有觉得旷野有时像一个小孩子似的？”</p>
+<p>“确实啊。但不过这样挺好的。你不知道这家伙每天……”</p>
+<p>“怎么了？”</p>
+<p>“没什么。”</p>
+<p>“算了，他的事我也不感兴趣。”</p>
+<p>“雪融化得真快，感觉今天晚上一路走过来，雪就融了不少。真不知道是不是我的错觉。”</p>
+<p>“可能是这样的吧。下了雪之后，林荫道真像一个童话世界啊。”</p>
+<p>“是。”</p>
+<p>“你也这样认为？”</p>
+<p>“确实很美啊。要是能够再安静一点就好了。”</p>
+<p>“同意。”</p>
+<p>“可惜啊。雪很快就融化了。”</p>
+<p>“没关系。对了，你知不知道教学楼上面的那个玻璃顶？”</p>
+<p>“怎么了？可以上去吗？”</p>
+<p>“可以。有一次我上去了，你猜我看到什么？”</p>
+<p>“不知道。不会是吓人的东西吧。”</p>
+<p>“不是。在一块玻璃上面我看见了一行用彩笔写的字。非常小，不仔细看真的看不到。”</p>
+<p>“什么内容？”</p>
+<p>“不告诉你了，哪天你自己去看嘛。”</p>
+<p>“和什么有关系？”</p>
+<p>“夏天。准确来说是夏至。我猜应该是两个人一起写的。”</p>
+<p>“突然好期待了。冬天赶快过去。”</p>
+<p>“期待什么？”</p>
+<p>“夏天。”</p>
+<p>“我也是。”</p>
+<p>说完，我们走到了巷子的尽头，我们相互道了别。</p>
+<p>在尽头，雪已经融化得差不多了。分别后，我回到家，洗了一个热水澡，水汽飘到了窗外，我突然感觉窗外已经春意盎然了。我回到床上，做了一个长长的梦，一觉醒来，满耳都是蝉鸣声，没想到已经是高考完的那个夏天了。</p>
+<p>我走出小区，太阳非常晒。我身边闪过一个赶着去学校的学生，对面那条又长又安静的林荫道里也走出来许多穿着校服的少男少女。他们正踩着树荫向外走，其中并没有黄芷沐。</p>
+<p>旷野给我打了个电话。他问我去不去他家玩。我去了他家，他一个人坐在桌前，没有看我一眼，一句话也没有说。他写信的那个本子正好写满了，但现在正疲倦地待在他的手旁的书架里。黄芷沐和罗教授去了同一所大学。我这才发现其实黄芷沐挺狡猾的，但是人往往不忍心用狡猾来形容一个漂亮女生。</p>
+<p>我走进学校，爬上了教学楼的玻璃顶。夏天的校园挺好看的。但是我并没有在哪一块玻璃上面找到什么用彩笔写的字，两个人写的，有关夏至。多么小的都没有看到。</p>
+<p>我换了一个叫做家的地方，换了一个学校，换了一个连接着家和学校的林荫道，继续重复着上学放学的路线。</p>
+<p>我突然想到，其实在小区对面的林荫道里没有发现黄芷沐挺正常的。毕竟，一直是我一个人在回忆，可能在回去的路上我根本和黄芷沐说过话，可能我们也根本没有在一个冬天的晚上同路，可能甚至都不会觉得雪后的林荫道很好看。那条林荫道，也许真的是童话世界吧。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>搞卷：我们那个时候学生之间的习语。搞，实行，卷，内卷行为。实行内卷行为。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>卷王：善于搞卷的王。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>马，谐音妈。一种非常粗俗的表达。<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
