@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>吃蛋糕</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, ‘Palatino Linotype‘, Times, ‘Times New Roman‘, serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: ‘courier new‘, monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="吃蛋糕">吃蛋糕</h1>
+<p>整个五月份我都在为一篇约好的稿子忙得焦头烂额。题目关于康德《纯粹理性批判》中“自我意识的同一性”问题。在这个问题上，我也不知道自己是什么立场，五月初，看了亨利希还有阿利森这几个好教授的文章之后，我就开始写导言了。首先，关键词是“康德”“先验演绎”“自我意识的同一性”，对的，主题是康德《纯粹理性批判》中“自我意识的同一性”问题；其次，导言部分肯定也关于“自我意识”；再次，我的问题应当是：自我意识有没有同一性呢？有，还是没有，这真是个令人头疼的问题。不过首先我得写个导言，再不写就没时间写了：
+&gt; 迪特·亨利希(Deter Henrich)在《康德先验演绎的论证结构》<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>中评价，康德在《纯粹理性批判》中的先验演绎部分包括了本书中最主要的两个论证，一个展现了系统性经验知识的可能性，另一个展现了超出经验限制知识的不可能性。<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> &gt;
+先验演绎中最关键的概念是“源始统觉”（origin
+apperception），整个先验演绎围绕此展开。在B
+版第16节康德即对源始统觉给出了定义：伴随着我的一切表象的“我思”（I
+Think）表象是（知性的）一种自发性行动，也就是源始的统觉，又叫自我意识(self-consciousness)的先验统一性<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>。而关于自我意识，历来聚讼的则是自我意识的同一性问题——这个问题的解决实际上关系到先验演绎的成败。本文将主要以对这个问题的梳理和回答为切入点，尝试评价康德先验演绎论证是否有其先天必然性。
+写到这里，我突然想到，“我思”、先验统觉和自我意识三者有什么关系呢？为此，我又只好回到《纯粹理性批判》上去涂涂画画。再写一版之后，我开始想到，我对亨利希先生的复述到不到位。于是，导言我写了又删，删了又写。康德的咒语在我脑内盘桓不去，
+Selbstbewusstsein, Selbstbewusstsein, Selbstbewusstsein……
+渐渐地，“自我意识”这个词语成了秒钟转动的声音，在我脑内滴滴答答，滴滴答答，滴滴答答。
+到了五月二十六号那天，下午五点钟，璇喊我去车库一趟。她买了个蛋糕放在车的后备箱，搬不动。我把蛋糕搬到小小的厨房里。我把蛋糕的纸盒子拆掉，拿出两个盘子放在桌上，往每个盘子里切一块蛋糕，有的奶油在切的时候被弄得不平整，我就用蛋糕刀把它们抹匀。
+璇坐在对面兴致盎然地看着我的一举一动。窗外的天空已经布满了乌云，一颗颗樟树被吹得哗啦啦响，去年残存的秋叶被扫下来打在窗上。看来夏天的第一次雨要来了。
+我把蛋糕递给她，但是自己却了无兴致。我正到了解决“自我意识的同一性”的紧要关头，但是刚刚看到一篇文献。张一兵教授从索恩-雷特尔的《脑力劳动和体力劳动》中发现了一种解决自我意识同一性的可行方案：抽象并不单纯是自我意识的活动，生成概念的劳作工地是发生于社会存在中的一种客观抽象，“这种人脑之外的现实的抽象活动是客观社会存在的一部分，恰恰是这种现实抽象建构了先验的社会生活形式，并由此规制了思维形式的主观抽象活动以生成看起来先验的思维形式。”<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>他指出，这个破解康德先天综合观念之谜的钥匙就隐藏在马克思的<strong>“现实抽象”</strong>机制中等待开掘。
+“吃一块吧，”璇端着蛋糕来到我身边。
+“马上就要交稿了，根本不知道要写什么，”我说，“也根本不知道自己还能不能写出东西来。”
+“也吃一块吧，”璇的情绪似乎也低落下来，“在变老一岁之前至少还能吃一块蛋糕呢。”
+听着窗外雨畅快地落下来，璇把奶油抹到我的额头上，我的肩上，我的身体上。我认真地吃起蛋糕来。
+“确实啊，”我说，“有的人连蛋糕也吃不到呢。”
+说到这里我想，再引入索恩-雷特尔说法只怕会打乱我作品的“综合统一”。因此，我最后便决定对这位先生置之不理了。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>如不特殊标注，本文中引用原文为英语由笔者译出。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Deter Henrich. <em>The Proof-Structure of Kant’s
+Transcendental Deduction</em>[J]. <em>Review of Metaphysics</em>, Jun 1,
+1969: p.640.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>B132.本文《纯粹理性批判》引文均只标注德文版页码。中文译文同时参考了李秋零：《纯粹理性批判（第二版）》和Paul
+Guyer, <em>Critique of Pure Reason</em>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>张一兵. “发现”
+康德先天观念综合与商品交换关系现实抽象的关联——索恩-雷特尔《脑力劳动与体力劳动》初解[J].
+哲学研究, 2016, No.4: p.74.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
