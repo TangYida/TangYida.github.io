@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>小金逃生记</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, ‘Palatino Linotype‘, Times, ‘Times New Roman‘, serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: ‘courier new‘, monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="小金逃生记">小金逃生记</h1>
+<p>小金，我家乡下养的鸡，消失了。它消失的第一天，我们都没发觉。</p>
+<p>小金是个瘸子。它是别人送给我们的。一开始被家人用绳子拴在车库里，准备过年的时候作一道菜，谁料这只鸡比较有反抗精神，在挣扎的时候把绳子捆着的腿弄折了。后来，我不知道是什么缘故，可能是觉得一只鸡爪的鸡不适合吃，也可能为了表达对此鸡的敬意，就把它留到年后。久而久之，这只独脚鸡就多了个名字“小金”，取义金鸡独立，有了名字的东西家里人也就不好杀了，只好活之，让它一只脚在院子附近蹦跶。毕竟，指着碗里的那几块香喷喷的肉和一只乌黑的鸡爪说，“这个盘子里的是小金”，总有点打消人的食欲。中间，父亲一度起过杀心，因为那段时间在家附近发现一只黄鼠狼，与其给黄兄吃，不如自己吃。但是我想着，就算被黄鼠狼吃掉，也不算吃亏，毕竟小金也没有多吃几口饭；如果真的想自己吃，超市里全都是两腿健全且拔干净了毛的。而平时家里人看见这只鸡在院子里闲散地跳着时，也会补充几句，“养久了，就不想杀掉了啊。”大概因此，父亲“杀小金”的想法也就作罢。一来，它不是只正常的适合吃的鸡，二来，我们不愿也懒得杀——于是，小金活下来了。</p>
+<p>小金留着，确实没用。一是，它不好看。鸡本来就长得怪奇万状，翘着个屁股，梗着个脖子，双眼一副又严肃又呆滞的样子，好像它时时刻刻在认真地犯傻；再加上小金只有一只脚，那只断了脚的腿底部变得乌黑光滑，时不时在地上划一下，好像自己算是一只正常鸡，即使这样，它还成天一瘸一拐地炫耀自己的身姿，就在人脚底下。二是，它不粘人。小金散漫地活着。平时，除了人看得见的院里，它还躲在车库阴暗的角落里下蛋，或者是藏到房屋北边的浅沟里——我不知道它在那里干嘛，要么凉快，要么吃蚯蚓；人丢的米，它不见得吃，首先得转几圈考察几番，才肯弯脖子啄一啄，可是我一靠近它，并诚心诚意“咯咯咯”几声，它也要落荒而逃；如果它真的饿了，就待我们吃饭的时候，孤零零站在亮着灯的门口观望，但就是不进来。这个时候你得出去，把剩饭洒在它面前。</p>
+<p>人往往因为动物的外形和习性赋予它们自己都闻所未闻的“品质”，而我总觉得小金是个故作深沉的滑头。挺着脖子，瞪着眼镜，
+蹦一下就停着一动不动，它一定是在过某种沉思的生活；也许是思虑既久，它就决定和我们保持相对独立性，超然世外，独自快活，只是饿的时候就接接救济。可是和其他家宠两相对照，猫，不粘人但好看，狗，不好看但粘人，都讨人喜欢；小金，则又不好看又不粘人，这样就不太有优势了。所以，小金活了，但是活的理由不充分。</p>
+<p>因此之故，我们，至少我，虽然也会被小金的体态逗笑，但并不时时惦记着小金。于是，有一天，整天都没有看见小金在院里散步，但是天气热得人晕头转向，兼之我也只想藏在自己的房间凉快，我不过是想，小金应该是躲在阴凉处的沟渠里了，只不过默不作声而已，晚上就会出来。</p>
+<p>——直到第二天晚上，父亲周末回家。他吃了晚饭后不见小金在脚边盘旋，问道：“小金呢？怎么不见了？”</p>
+<p>“应该躲到屋背后去了吧，”我说，“不过我一天都没有看见它。”</p>
+<p>我们在屋背后分头找，浅沟里，树底下，都没有看见。我说，怎么办呢？那看来小金逃走了，没办法了。父亲没有做声，钻进屋的西侧较深的空地里，没多久，说小金掉到水里面去了。</p>
+<p>“鸡落到水里面去了？”</p>
+<p>“是的嘞，”父亲说，“我去拿双套鞋，你去把网拿过来。”</p>
+<p>父亲穿好套鞋，我拿着捞鱼用的网，跟着父亲，来到西侧。西边是一个幽暗的渠，沟渠阴凉的深处，小金全身浸泡在水里，人来了也不动一下，只剩下脖子挺着，默不作声。它好像依然在沉思，但是这次不能当自由散漫的滑头了。父亲把网伸出去，把小金捞起来时，它才“咯”了一声。</p>
+<p>小金又一只脚立在了院中，拼命地甩掉身上的水。它脖子以下全湿了，也许是在水里面泡了一天有余，黑黄夹杂的羽毛像是粘在身体上一样，我这才看出来它挺瘦的。要是再晚一天，它那黑皇夹杂的脖子估计也会落入水里全部湿掉，变得又细又长。我把剩饭拿出来丢在地上。小金打量都没打量，弯下脖子啄起一大口白花花的米饭，抬起头往肚子里吞；又弯下脖子，啄起米饭，往肚子里吞。吃得太急了，两三粒米饭粘在了喙上，它使劲在地上蹭也没有蹭下来。于是它继续啄起米饭吃。</p>
+<p>父亲摇着蒲扇，看着小金吃食。</p>
+<p>“小金作孽<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>嘞！跌到渠里面，跳又跳又跳不出来，飞又飞不出来，<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>一个人默不作声待在那里。只怕饿坏了！”</p>
+<p>谁叫它每天悠哉悠哉乱跑呢？谁叫它不作声呢？但它还是得以荒谬地保全性命。一来，我父亲偶然想起来它并坚持找到它，二来，它毕竟自己忍受得了这难熬的生活——这生活酷暑难当，危险重重——</p>
+<p>于是，小金又活下来了。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>方言，意为“可怜”。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>在乡下，家禽翅膀上的羽毛往往会被人剪短，以防止在家中上蹿下跳。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
