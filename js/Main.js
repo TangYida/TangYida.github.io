@@ -39,7 +39,7 @@
 	{
 		var x = e.clientX;
 		var y = e.clientY;
-		createFireworks(x, y, ["汤益达", "祝你","二〇二三","每天","乐乐乐！"][cnt < 3 ? cnt : (cnt % 5 + 3)]);
+		createFireworks(x, y, ["胖", "哥","二〇二五","生日","快乐"][cnt < 3 ? cnt : (cnt % 5 + 3)]);
 		cnt ++;
 	}
 	
