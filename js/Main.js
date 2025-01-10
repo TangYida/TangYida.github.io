@@ -39,10 +39,14 @@
 	{
 		var x = e.clientX;
 		var y = e.clientY;
-		createFireworks(x, y, ["胖", "哥","二〇二五","生日","快乐"][cnt < 3 ? cnt : (cnt % 5 + 3)]);
+		var backgroundMusic = new Audio("fireworks.mp3");
+		backgroundMusic.play();
+		createFireworks(x, y, ["祝愿我们的胖哥","二〇二五","生","日", "快", "乐"][cnt]);
 		cnt ++;
+
+		if(cnt == 7) window.location.href = 'sweetwishes2.html';
 	}
-	
+
 	document.addEventListener("mousedown", mouseDownHandler);
 
 	var particles = [];

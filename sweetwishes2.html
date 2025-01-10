@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>sweetwishes2</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, ‘Palatino Linotype‘, Times, ‘Times New Roman‘, serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: ‘courier new‘, monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+
+.red {
+	color: #ed5a65;
+}
+
+.blue {
+	color: #2775b6;
+}
+
+.green {
+	color: #1ba784;
+}
+.yellow {
+	color: #fbc82f;
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+        <script> 
+            const backgroundMusic = new Audio('jazz.mp3');
+            backgroundMusic.loop = true;
+            function music(e){backgroundMusic.play();}
+            document.addEventListener("mousedown", music);
+        </script>
+<h1 id="下面和小编一起看看大家想对胖哥说些什么吧">下面，和小编一起看看大家想对胖哥说些什么吧……</h1>
+<h2 id="pg初印象">PG·初印象</h2>
+<blockquote>
+<p>好有活力好有创意的高级p人，名副其实的摩羯工作狂人。</p>
+</blockquote>
+<blockquote>
+<p>在开学典礼暖场节目彩排上大叫“xxx，动线！”特别井然有序。我在旁边站桩，听见研究生新生和合唱团的同学讲，那就是胖哥啊。</p>
+</blockquote>
+<p>小编按，赞同。</p>
+<p>接下来，请问胖哥是：（多选题，5分）</p>
+<blockquote>
+<p>A：胖哥不像严肃的老师，胖哥是哥。</p>
+</blockquote>
+<blockquote>
+<p>B：略严厉的老师。</p>
+</blockquote>
+<blockquote>
+<p>C：亲切的人民老师哈哈哈哈…最开始有印象已经是进团艺一学期了，在寒假做线上歌会的时候对接嘉宾有点问题，get
+bro手把手教学(*´・ｖ・)</p>
+</blockquote>
+<p>正确答案：ABC。</p>
+<h2 id="难忘回忆with胖哥">难忘回忆with胖哥</h2>
+<p class="red" style="text-align: center"><strong>元旦金曲夜</strong></p>
+<p class="yellow" style="text-align: center"><strong>312干了整整一天的报销</strong></p>
+<p class="green" style="text-align: center"><strong>建党百年红歌快闪</strong></p>
+<p class="blue" style="text-align: center"><strong>每年的毕晚金曲夜</strong></p>
+<blockquote>
+<p>也太多了！江湾直播熬大夜，去marsol喝黄油啤酒，一起看戏，跟着bro看了很多好戏！但是感觉读研之后我们好像很少一起喝酒了有空叫我喝酒好吗？好的。（ppppps.俺换手机后少了好多照片！只能放一张抓拍惹）</p>
+</blockquote>
+<blockquote>
+<p>和朋友闹矛盾时，听说胖哥考了心理咨询证，跑去找胖哥。其实还蛮忐忑的，感觉有那么些微冒昧，但是胖哥，多么感人的言语多么感人的路灯！好好的胖哥</p>
+</blockquote>
+<blockquote>
+<p>与胖哥相处不久，但回忆已甚多，以至不知从何说起。可能是因为，这些回忆总渗透在团艺的工作之中、一点一滴的工作之中。不过还是能说出一二回忆出来。首先是胖哥的口才，胖哥非常会说，能够把不该有的矛盾巧妙化解，让该有的期待愿景深入人心。其次，胖哥心思非常细腻，哈哈，我也举不出什么例子，总之，他往往知道你需要什么样的情绪价值。Last
+but not least,
+说老实话，胖哥在我的工作上给了我意想不到的关心和重视，真的，意想不到，亲自参与我们部门的内培，和我们一起惦记着要拍的片子，或是给出精准的批评或是给出我们渴望已久的鼓励，如此等等，数不胜数。</p>
+</blockquote>
+<h2 id="来大声说说给胖哥的悄悄话">来，大声说说给胖哥的悄悄话👂</h2>
+<p>📢认识胖哥很开心！和胖哥一起工作也很开心！喜欢团艺！新一年要“团在艺起”，创造更多不可能！✌</p>
+<p>🔊非常幸运的跟胖哥有了4年酸甜还有苦辣hhh的回忆。很感谢胖哥对我在学工和生活上的帮助和指引！很想念团艺的时光~㊗️胖哥万事胜意，身体健康</p>
+<p>🤫多可爱多好呀胖哥，We are always there for
+you！更多的形容词和补充说明像煽情和恭维，这句看似敷衍的话其实是所有情绪和思考浓缩在一起后我最真诚的想法。希望胖哥新的一年万事胜意，减肥成功，所有不开心的事情都有转机，所有困难跳一跳都能解决。</p>
+<p>💬胖哥生日快乐！诶，既然是生日的话，最重要的还是要健康，身体健康、心灵健康！</p>
+<p>🎤最温暖最贴心最可爱的bro，能够认识你真是太好了(っ˘зʕ•̫͡•ʔ朱书记新的一岁平平安安、健健康康、开开心心♡(<em>´∀｀</em>)人(<em>´∀｀</em>)♡</p>
+<p><em>website made by: tangyeeda</em></p>
+</body>
+</html>
