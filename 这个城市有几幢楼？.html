@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>这个城市有几幢楼？</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, ‘Palatino Linotype‘, Times, ‘Times New Roman‘, serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: ‘courier new‘, monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="这个城市有几幢楼">这个城市有几幢楼？</h1>
+<p>明天就要离开长沙了。这座有湘江流淌过、有岳麓山庇佑、我在其中度过了青春时期的城市，这座只存在于我的幻想中的、我最爱的城市。</p>
+<p>今天，在睡觉之前，我的心思在房间的那扇大窗户前停留了一会。夜空一片漆黑，亮着灯的卧室像是一盏盏灯笼一样悬在空中。十公里之外，就是城市的天际线，彼处高楼林立。被唤作乳带的银河也不过如此吧。好像从初中到现在，这些高楼都没有变过，一直屹立在那里。</p>
+<p>而我初中的一个爱好，便是在漆黑的夜里，凝视着这些楼。我不知道如何去形容彼时我心中的感受，如何去形容这些高楼给人带来的震撼感，它们如何让我直观地感到人类是多么地伟大、感到生命是多么地充满活力，如何让我觉得，活着真他妈的好。</p>
+<p>初中是一个最漫长的夏季。虽然那个时候我就习惯了熬夜，但是感觉一天做得最多的事还是在走廊上疯跑，放学之后打篮球，晚上写作业的时候做春梦。然后幻想着喜欢的女孩子和我表白，有朝一日能够和她在沙滩上做爱（不好意思，我从那个时候起就开始这么下流龌龊了）——虽然遗憾的是，这个女孩最后居然真的和我表白了，但我可能太
+<strong>懦弱</strong>了，懦弱得经不起一次反叛、一次皱眉、一次爱，于是我傻逼一样地拒绝了她——到今天了，谁能算出来这个夏天对我和她造成了多大的影响？除了性幻想，我还幻想着很多，幻想自己成为一个诗人、作家，成为一个物理学家、数学家，成为一个天才的程序员。</p>
+<p>那个时候，我最喜欢做的事情就是，在一座硕大而华丽的“乳带”面前，问道，这座城市有几幢楼呢？</p>
+<p>高中，炙热得多、短得多也痛苦得多。那是我最悲观的时候，也是我最善于幻想的时刻。我幻想着我是盖茨比，只有盖茨比能够给我熬过夏天的力量。那个时候我已经感受到，一切生命
+<strong>必然</strong>以死亡告终，一切故事
+<strong>必然</strong>以孤独告终，一切存在
+<strong>必然</strong>以虚无告终。可是在这之前，盖茨比说，让我和黛西见一面吧，她理解我的一切（就算是虚伪的）痛苦和挣扎，她会包容我的一切错误和缺点。就算在尼克的家里聊聊天也可以啊……所以，我开始发了疯似地喜欢写东西，我的生命就是我写的一切。我幻想着写东西的自己（寂静的凌晨伏于床头，或者是喧哗的夜晚坐在茶颜悦色）就是一个英雄，这个英雄反抗着虚无。</p>
+<p>那个时候，我知道，一个以悲剧结尾的幻想本身并不是悲剧，失去了幻想才是。</p>
+<p>现在呢？现在我20.75岁了，时间也来到了2025年。我感受不到任何一个夏季给我带来的激动，只有眩晕，一片无法逃离的眩晕。我骗自己，就让这些东西都存在在那里吧，我无所吊谓，活着就行。可是这其实是你在掩盖着你内心渴望的一切。你想要的不是任何言语能够胜过虚无意义感，你想要的不过就是它们能够被人看到，穿过时间，备受尊敬，就这么简单。你之所以发了疯似地写作，在于，你认为在这些文字中间（或者，至少在写它的时候，至少在看它的时候！）存在着一个世界，没有竞争和比较，没有需要他人认可的焦虑也没有和他人保持距离的恶心，没有让你崩溃的沉默和皱眉。可是，这些东西有人在看吗？</p>
+<p>你呢？你在看吗？不。抽象的东西最好的时候惹你发笑，最坏的时候让你愤怒。于是，你经过我的生命就像你划过这个网页一样迅速。</p>
+<p>这个时候，我才知道，虚无本身并不虚无， <strong>他人</strong>
+不理解“虚无”的时候才是。</p>
+<p>多想自己变成一个孩童，在面对一座城市的时候好奇地问道：这里有几幢楼呢？长沙很古老，我还很年轻，这个世界还等着我去探索。你不在世界之外，别人也不是。</p>
+<p>每一年，我们总是等着在夏季挥洒汗水（就像农民在那个季节进行一年最辛苦的双抢），忙过这个夏季，再等着一个冬天来恢复精力。时间一年一年地过去，我们唱歌的声音一年一年地变弱，直到死去，一生化为留给后代的遗产。我不知道自己有没有恢复好，但是，无论如何，2025年快乐。</p>
+<p>（on G1342）</p>
+</body>
+</html>
