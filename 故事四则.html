@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>故事四则</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, ‘Palatino Linotype‘, Times, ‘Times New Roman‘, serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: ‘courier new‘, monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="故事四则">故事四则</h1>
+<h2 id="春雷">§1 春雷</h2>
+<p>晚上，戴濛对我说：“喂，你觉得房间里闷吗？”</p>
+<p>确实，靠南的那扇窗子上，已经爬满了白蒙蒙的水珠，夜色和对面那幢楼的灯光在水珠上晕染开来。玻璃触感寒凉，只是并不像冬天的窗户那样刺骨，反而是让人想把脸贴上去。</p>
+<p>戴濛在坐在地上喊道：“诶，窗户有这么好摸吗？”</p>
+<p>我回头冲她做了个鬼脸，“好摸。”</p>
+<p>戴濛白了我一眼。我立马说，“哎呀不就开个窗户嘛。”</p>
+<p>窗户打开了。一瞬间，风涌向了我的耳朵，路人的谈话声、汽车的引擎声、云飘动的声音像是城市的潮水一样，在我们这个小房间的窗边翻滚。我感觉整个四周都是戴濛头发的味道，而我们这个小房间是这片海洋中最幸福的船舱。</p>
+<p>戴濛站起身来：“空气有那么好闻吗？”</p>
+<p>我高声喊了一句——好闻！</p>
+<p>戴濛冲过来，重重地压向我的右肩膀。一山不容二虎说的就是这个时候吧。不过，我情愿挤一点。</p>
+<p>酝酿了许久，我终于敢开口了：“我觉得风的味道闻起来像你。”</p>
+<p>说着，我就立马把脸转了过去，不过戴濛并没打我。我把头回过来，看见戴濛低着头：“谢谢你夸我。”</p>
+<p>“——我没说风的味道好闻”</p>
+<p>被打了。</p>
+<p>那天晚上，我们爬在窗沿上闻了好久。戴濛有个说法我觉得挺有意思的，她说，城市的潮水声就像雷鸣一样。是春雷。我说，确实，春天到了啊。她说，睡啦，睡啦，明天就是春天了。</p>
+<h2 id="会好点吗">§2 会好点吗？</h2>
+<p>昨天晚上，我，g还有h一起在涩谷的酒吧里玩到了六点钟。过去的几个小时里，在音乐和酒精的引导下，我像个小丑在她的边上不停地鸣叫、旋转、搞出一些奇怪的动静，逗得她哈哈大笑。现在，夏天的太阳过早地把涩谷的街头照得蒙蒙亮，那些晚上看不见的东西，黑色的塑料袋，花坛边的垃圾，倒在地上的酒鬼，都浮现在我们眼前。我终于清醒地意识到，我醉了，而我和她往日的边界感居然早就消失得一干二净。</p>
+<p>在回去的路上，像往日一样，我又一次觉得她非常可爱。精致的个别的看不透的不可以化约语言的那种复杂性，让我感到我的追求我的懦弱都变得不值一提的复杂性。我多想抱一抱她！于是，我对g说，你先回旅馆，我送h回她的学校。</p>
+<p>“我帮你拎拎酒瓶。”我说。</p>
+<p>“你要送我回去吗？”h笑着，把酒瓶给了我。</p>
+<p>我举着酒瓶晃了晃说，“我以为你也想要我送。”</p>
+<p>“好好好——那请您送我吧。”</p>
+<p>到了h的学校门口，我们两个拥抱在了一起。</p>
+<p>街头人渐渐多起来了。突然，我感觉g在街的另一边打量着我们两个人，一股反胃感油然而生。我就像泄了气的皮球飞离地面那样，从拥抱中抽身而出。</p>
+<p>h疑惑地看着我。</p>
+<p>“非常抱歉，我对自己充满了厌恶，所以总感觉在玷污你。”</p>
+<p>我快要哭出来了。可是，我却感觉h的头发飘到了我脸上。她给了我一个吻。</p>
+<p>“你说会好点吗？”我问，“self-loath.”</p>
+<p>“会的，”她对我说，“会的。”</p>
+<p>我感觉到我们之间形成了一个世界，没有永恒和短暂，没有丑和美，没有时代、历史和政治，诸此等等。只有爱。我真希望这一天永远也不要开始。</p>
+<p>可是，g也许还在旅馆等着我呢。他的手上戴着一只手表，那只手表总是走得很准时，准时得要命。</p>
+<h2 id="等消息">§3 等消息</h2>
+<p>读大学的时候，易达的寝室是一栋孤零零立在河边上的楼。是那种已经被历史遗忘的、秃了头的赫鲁晓夫楼。在那段时间里，易达习惯每天在房里睡十四个小时，只要起床超过两个小时，不管是干什么（比如，吃饭，写小说，等等），他就会感到疲倦。所以，只要是工作量超过两个小时的活，他都会退出。</p>
+<p>比如，今天一清早，他给他的好朋友费希特发了条消息，分享自己最近对特朗普气死民主党议员这个政治事件的看法。刚发的时候没回，应该是没有第一时间看到；过了二十分钟没回，也许是费希特正在花时间进行严肃的思索。易达就这样躺在冰冷冷的床上等了两个小时，还是一点动静都没有，他这才想到，费希特是那种精力丰富、每天参加各种活动、身边围着许多女性朋友的人——也许自己的消息就这样沉底了。</p>
+<p>眼睛酸痛，满脸油垢。易达钻进被子闭上眼睛。</p>
+<p>能够听到河流围绕着这栋房子，在窗外静静地流淌。</p>
+<p>易达在梦里想起去年秋天发生的事情。</p>
+<p>在一个台风刚过境的夜晚，他和何一起走在大学旁边的一条小道上。两个人都喝了不少酒，何突然安静得不像她了，低着头数脚下的砖块。</p>
+<p>易达知道这是故意被制造出来的沉默。于是，他决定在自己预备已久的那些段子里选最精彩的几个，讲给她听。</p>
+<p>“现在是段子时间。”易达宣布。</p>
+<p>“你说，我听着。”</p>
+<p>“最近，特朗普把民主党议员给气死了。特朗普在发言的时候，有一位民主党议员突发不适被送医，第二天就死了。请问议员的死因是特朗普还是医院？——”</p>
+<p>“——要不讲讲你的八卦？”何小声打断了他，“你讲你的我再讲我的。”</p>
+<p>易达苦笑了一下，想了想，又重新鼓起了勇气。他摆出一副很深沉的样子，给何讲了他上一段和鸣秋的关系。一开始，他和鸣秋在陌生人的礼貌中相互分享彼此的痛苦。可随之问题就出现了：他们之间越来越熟悉，讲给对方的痛苦就越来越多，对彼此就越来越不礼貌。他们把自己都难以忍受的一面摊开给另一个人看，结果就是相互鄙视和相互憎恨。又成为陌生人了。</p>
+<p>“我真的是傻逼。”易达像一个又悲伤又疲惫的马戏团演员。</p>
+<p>漂亮的何给了他一个又同情又温柔的微笑：“别害怕，我只想知道真实的你…”</p>
+<p>真的吗？易达蹲在地上，抬头看着何。泪水已经沾满了他的睫毛。何点点头，真的。</p>
+<p>易达牵着何的手，两个人在就这样在街头深情地注视着对方。</p>
+<p>“我们今天晚上去哪？”何说。</p>
+<p>“带你去我最喜欢的电影院！”易达拉着何的手往前走，两个人在深幽的城市的小巷里穿梭，踩着还没有干透的地面，耳边响着的士划过空气的声音，仿佛这座城市只有他们两个人。</p>
+<p>“到了！”易达说。两个人停下来。</p>
+<p>面前是一个挂着红色灯管的色情电影院。</p>
+<p>“这是你喜欢的地方吗？”何不解地看着易达。</p>
+<p>易达一边不假思索地答应着，一边想要凑近何。</p>
+<p>何皱着眉头一把推开了他，满脸嫌弃和愤怒：“你的脸长得真恶心！滚远一点！”说着，她气冲冲地扬长而去，留下易达一个人在这里失神。一声惊雷，好像下起了又冷又湿的雨来。</p>
+<p>易达就这样被惊醒了。抬头看看窗边淡蓝的天色，就像一个有鸟鸣的清晨。打开手机，已经下午六点多了，还有费希特的几个未接电话。他说，非常不好意思，在忙着干什么呢？正好，我有个急事要找你帮忙，接着就是几个电话，一连串的dd。</p>
+<p>刚才在忙着看书，最近我事儿太多了，易达回道。</p>
+<p>发过去，又没什么动静。他本来以为这样会让费希特珍惜和他的聊天机会。很可惜
+，他猜错了。</p>
+</body>
+</html>
