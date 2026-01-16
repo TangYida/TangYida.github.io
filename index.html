@@ -2,14 +2,41 @@
 <!--{{{ head part-->
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta charset = UTF-8 /> <title>丑陋博客</title>
+  <meta charset="UTF-8" />
+  <title>丑陋博客</title>
 
   <link href="./main.css" type="text/css" rel="stylesheet"> 
   <script>
     if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
       window.alert('IE is not supported on this page.')
     }
-   </script>
+  </script>
+  <style>
+    /* LA版本按钮样式，与现有按钮风格统一并添加悬浮效果 */
+    .btn-la {
+      padding: 5.7px 8px;
+      margin-right: 8px;
+      font-family: zpix, backup, Courier New, Song;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-la:hover {
+      background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #ffd166);
+      background-size: 400% 400%;
+      animation: gradient 1.5s ease infinite;
+      color: white;
+      border-color: #666;
+    }
+    .btn {
+      padding: 4px 8px;
+      margin-right: 8px;
+    }
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
 <!--}}}-->
 <body class="container">
@@ -18,113 +45,90 @@
       <div style="font-weight:900;font-size:20px;">丑陋博客</div>
       <div style="font-weight:900;margin-bottom:5px;">By TangYida,Fudan University; </div>
     </div>
-    <div style="float:right;
-		font:zpix,backup,Courier New,Song;">
+    <div style="float:right; font:zpix,backup,Courier New,Song;">
+      <!-- 新增 LA version 按钮（左侧第一个） -->
       <span>
-         <button type="button" onclick="document.getElementById('dialog-search').showModal();">
-		 搜索
-         </button>
-
-         <dialog id="dialog-search">
-           <form method="dialog">
-             <p>搜索</p>
-             <menu>
-               <button>取消</button>
-	       <button>Go!</button>
-             </menu>
-           </form>
-         </dialog>
+        <button type="button" class="btn-la" onclick="window.open('./la.html', '_blank')">
+          LA version
+        </button>
       </span>
 
       <span>
-        <button type="button"
-	      onclick="document.getElementById('dialog-comment').showModal();">	
-		评论
-        </button> 
-        <dialog id="dialog-comment" style = "width:500px;">
+        <button type="button" class="btn" onclick="document.getElementById('dialog-search').showModal();">
+          搜索
+        </button>
+
+        <dialog id="dialog-search">
           <form method="dialog">
-            <div style="float:left">评论</div>
-	    <div style="float:right"><button>x</button></div>
-  	    <div id="lv-container" data-id="city" data-uid="MTAyMC80OTAwMS8yNTQ5NQ==">
-  		<script type="text/javascript">
-  	   (function(d, s) {
-  	       var j, e = d.getElementsByTagName(s)[0];
-  	
-  	       if (typeof LivereTower === 'function') { return; }
-  	
-  	       j = d.createElement(s);
-  	       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-  	       j.async = true;
-  	
-  	       e.parentNode.insertBefore(j, e);
-  	   })(document, 'script');
-  		</script>
+            <p>搜索</p>
+            <menu>
+              <button>取消</button>
+              <button>Go!</button>
+            </menu>
           </form>
         </dialog>
-
       </span>
 
       <span>
-      <button type="button"
-	      onclick="window.open('./old.html')">	
-	      怀旧版
-       </button> 
+        <button type="button" class="btn" onclick="window.open('./old.html')">	
+          怀旧版
+        </button> 
       </span>
 
       <span>
-	      <button type="button" onclick="document.getElementById('dialog-send').showModal()">
-		      发邮件
-	      </button>
-              <dialog id="dialog-send">
-                <form method="dialog">
-                  <h2>send e-mail to TangYida.</h2>
-		  <p>If you wanna chat him</p>
-		  <p>please send him an e-mail.</p>
-                  <a href="mailto:tang361313182@outlook.com?subject=Hi,TangYida&body=write something...">
-			  SEND!</a>
+        <button type="button" class="btn" onclick="document.getElementById('dialog-send').showModal()">
+          发邮件
+        </button>
+        <dialog id="dialog-send">
+          <form method="dialog">
+            <h2>send e-mail to TangYida.</h2>
+            <p>If you wanna chat him</p>
+            <p>please send him an e-mail.</p>
+            <a href="mailto:tang361313182@outlook.com?subject=Hi,TangYida&body=write something...">
+              SEND!</a>
 
-                  <menu class="dialog-menu">
-                    <button>Cancel</button>
-                  </menu>
-                </form>
-              </dialog>
-	</span>
+            <menu class="dialog-menu">
+              <button>Cancel</button>
+            </menu>
+          </form>
+        </dialog>
+      </span>
     </div>
   </header>
   <article id="main" style="margin-top:20px;margin-bottom:20px;">
-   <script src="build.js"> </script>
-   <script>
-	articleList.forEach(
-		(item) => {
-			var passage = document.createElement('div') , name =
-				"" , time = "";
-			if(typeof item == "object") {
-				name = item[0];
-				time = '/*Last modified:' + item[1] + '*/';
-			} else name = item;
+    <script src="build.js"> </script>
+    <script>
+      articleList.forEach(
+        (item) => {
+          var passage = document.createElement('div') , name =
+            "" , time = "";
+          if(typeof item == "object") {
+            name = item[0];
+            time = '/*Last modified:' + item[1] + '*/';
+          } else name = item;
 
-			passage.innerHTML = '<a href="' + name +
-				'.html"class="passage">*&nbsp' + name +  '</a>';
-			passage.onmousemove = function () {
-				this.innerHTML = '<a href="' + name +
-					'.html"class="passage">*&nbsp' + name +
-					'&nbsp' + time +
-					'</a>';
-			}
-			passage.onmouseout = function () {
-				this.innerHTML = '<a href="' + name +
-					'.html"class="passage">*&nbsp' + name +
-					'</a>';
-			}
+          passage.innerHTML = '<a href="' + name +
+            '.html"class="passage">*&nbsp' + name +  '</a>';
+          passage.onmousemove = function () {
+            this.innerHTML = '<a href="' + name +
+              '.html"class="passage">*&nbsp' + name +
+              '&nbsp' + time +
+              '</a>';
+          }
+          passage.onmouseout = function () {
+            this.innerHTML = '<a href="' + name +
+              '.html"class="passage">*&nbsp' + name +
+              '</a>';
+          }
 
-			document.getElementById('main').appendChild(passage);
-		}
-	);
-   </script>
+          document.getElementById('main').appendChild(passage);
+        }
+      );
+    </script>
   </article>
   <footer >
-   <span style="font-weight:800;">
-      powered by:	    
+    <span style="font-weight:800;">
+      powered by:	 
       <a href="https://github.com/TangYida/TangYida.github.io">github</a>
       several style from:
       <a href="https://github.com/nostalgic-css/NES.css">NES.css</a>
@@ -133,3 +137,4 @@
     </span>
   </footer>
 </body>
+</html>
