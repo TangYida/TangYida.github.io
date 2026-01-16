@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <!-- ✅ 移动端自适应核心必加：视口适配标签 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>YIDA's UGLY BLOG - LA version</title>
+    <style>
+        /* 全局基础样式 - 保留你的配色+核心样式 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html,body {
+            width: 100%;
+            height: 100%;
+            font-family: zpix,backup,Courier New,Song,monospace;
+            background: #006680; /* 你的青蓝色背景 */
+            color: #f9e488; /* 你的复古暖黄文字 */
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* ✅ 核心布局：弹性垂直排列 实现页脚贴底+自适应 */
+            display: flex;
+            flex-direction: column;
+        }
+        a { color: #fcf080; text-decoration: none; font-weight: 800;}
+        a:hover { color: #ffff99;}
+
+        /* 标题栏 20vh高度+移动端适配 保留你的样式 */
+        .bg-banner {
+            width: 100%;
+            height: 20vh; /* 你设定的高度 */
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid #f9e488;
+            flex-shrink: 0; /* 固定高度 不被压缩 */
+        }
+        .california-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%; /* 裁剪背景核心区域，小屏也好看 */
+            filter: sepia(60%) brightness(0.7) contrast(1.1) saturate(0.9);
+        }
+        .title-wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+            padding: 0 8px;
+            z-index: 2;
+        }
+        /* ✅ 标题自适应缩放：大屏50px，小屏自动缩小，永不溢出 */
+        .main-title {
+            font-size: clamp(24px, 10vw, 50px);
+            font-style: oblique;
+            font-weight: 1000;
+            color: #006680;
+            text-shadow: 3px 3px 0 #f9e488, -1px -1px 0 #f9e488;
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+        /* ✅ 副标题同步自适应 */
+        .sub-title {
+            font-size: clamp(12px, 3vw, 18px);
+            color: #006680;
+            text-shadow: 2px 2px 0 #f9e488;
+        }
+
+        /* ✅ 核心优化：文章列表 自适应高度+移动端友好宽度 */
+        .post-container {
+            width: 100%;
+            max-width: 800px; /* 大屏最大宽度 */
+            margin: 15px auto;
+            padding: 0 15px; /* 移动端减小左右内边距，增加可视区域 */
+            flex: 1; /* 自动填充标题栏和页脚之间的所有空间 */
+            overflow-y: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch; /* 移动端顺滑滚动 */
+        }
+        /* 复古滚动条 保留你的配色 */
+        .post-container::-webkit-scrollbar { width: 8px; }
+        .post-container::-webkit-scrollbar-track { background: #004055; }
+        .post-container::-webkit-scrollbar-thumb { background: #f9e488; border-radius: 0; }
+        .post-container::-webkit-scrollbar-thumb:hover { background: #ffff99; }
+
+        /* 文章列表项 保留你的样式+移动端优化 */
+        .post-item {
+            padding: 12px 0; /* 移动端增加上下内边距，触控更友好 */
+            border-bottom: 1px dashed #d6c155;
+            margin-bottom: 8px;
+            transition: all 0.2s ease;
+        }
+        .post-item:hover { 
+            padding-left: 5px; 
+            background-color: #004055; /* 适配青蓝背景的hover深色，不突兀 */
+        }
+        .post-category {
+            display: inline-block;
+            font-size: clamp(10px, 2.5vw, 12px);
+            color: #e6d278;
+            margin-right: 8px;
+            font-weight: normal;
+        }
+        .post-title { 
+            font-weight: 800;
+            font-size: clamp(14px, 3vw, 16px); /* 标题文字自适应 */
+        }
+
+        /* ✅ 页脚固定在屏幕最底部 + 移动端适配 */
+        footer { 
+            width: 100%;
+            padding: 12px 15px;
+            text-align: center;
+            font-size: clamp(10px, 2.5vw, 12px);
+            color: #e6d278;
+            border-top: 1px solid #d6c155; /* 顶部分割线，呼应主题 */
+            flex-shrink: 0; /* 固定高度，永不被压缩 */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-banner">
+        <img src="https://www.pressenterprise.com/wp-content/uploads/2023/12/GettyImages-1444602962.jpg?w=1860" class="california-bg" alt="Vintage California">
+        <div class="title-wrap">
+            <h1 class="main-title">YIDA's UGLY BLOG</h1>
+            <h2 class="sub-title">LA version</h2>
+        </div>
+    </div>
+
+    <div class="post-container" id="postList"></div>
+
+    <footer>Powered by TangYida | LA Vintage Style</footer>
+
+    <script src="./posts.js"></script>
+    <script>
+        const postListEl = document.getElementById('postList');
+        if(articleList && articleList.length > 0){
+            articleList.forEach(post => {
+                const item = document.createElement('div');
+                item.className = 'post-item';
+                item.innerHTML = `
+                    <span class="post-category">[${post.category}]</span>
+                    <a href="./${post.title}.html" class="post-title">*&nbsp;${post.title}</a>
+                `;
+                postListEl.appendChild(item);
+            });
+        } else {
+            postListEl.innerHTML = '<div style="text-align:center; padding:20px; color:#e6d278;">No passages yet.</div>';
+        }
+    </script>
+</body>
+</html>
