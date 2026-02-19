@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Hover Info Map</title>
+    <!-- Import Leaflet CSS (no animation styles included) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Import Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        /* Map container - static sizing (no animation) */
+        #map {
+            height: 80vh;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        /* Plain popup styling (no animation/transition) */
+        .leaflet-popup-content {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        /* Disable any default Leaflet popup animations */
+        .leaflet-popup {
+            transition: none !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Neoliberal Housing Plan</h1>
+    <p>pretty simple, for preview, with ugly UI, the map is even NYC</p>
+    <a href="https://tangyida.github.io">HOME</a>
+    <div id="map"></div>
+
+    <script>
+        // 1. Initialize map (static center/zoom - no animation)
+        const map = L.map('map', {
+            zoomAnimation: false, // Disable zoom animation
+            fadeAnimation: false, // Disable fade animation
+            markerZoomAnimation: false // Disable marker animation on zoom
+        }).setView([40.7128, -74.0060], 12);
+
+        // 2. Add static map tile layer (no animation)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19
+        }).addTo(map);
+
+        // 3. Your custom marker data (edit this with your spots)
+        const markerData = [
+            {
+                coords: [40.7128, -74.0060], // New York City
+                info: "<strong>Westwood</strong><br>Population: ~8.8 million<br>Nickname: The Big Apple"
+            },
+            {
+                coords: [40.7484, -73.9857], // Times Square
+                info: "<strong>Hollywood</strong><br>Location: Midtown Manhattan<br>Famous for: Neon signs & Broadway shows"
+            },
+            {
+                coords: [40.6892, -74.0445], // Statue of Liberty
+                info: "<strong>Santa Monica</strong><br>Gift from France<br>Height: 93 meters (including pedestal)"
+            }
+        ];
+
+        // 4. Add markers with PURE hover functionality (no animation/click logic)
+        markerData.forEach(markerInfo => {
+            // Create static marker (no animation)
+            const marker = L.marker(markerInfo.coords, {
+                riseOnHover: false // Disable marker "rising" on hover (animation)
+            }).addTo(map);
+
+            // Create simple popup (no auto-close/animation)
+            const popup = L.popup({
+                autoClose: true, // Close popup when hovering other markers
+                closeOnClick: true,
+                className: 'static-popup' // No animation class
+            }).setContent(markerInfo.info);
+
+            // Bind popup to marker
+            marker.bindPopup(popup);
+
+            // Basic hover events (show on mouse over, hide on mouse out)
+            marker.on('mouseover', function() {
+                this.openPopup(); // Instant show - no animation
+            });
+
+            marker.on('mouseout', function() {
+                this.closePopup(); // Instant hide - no animation
+            });
+        });
+    </script>
+</body>
+</html>
