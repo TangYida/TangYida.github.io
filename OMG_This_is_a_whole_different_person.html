@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>OMG_This_is_a_whole_different_person</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, ‘Palatino Linotype‘, Times, ‘Times New Roman‘, serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: ‘courier new‘, monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+</head>
+<body>
+<h1 id="战俘日记">战俘日记</h1>
+<h1 id="also-known-as-omg-this-is-a-whole-different-person">Also known
+as, OMG, This is a whole different person!</h1>
+<h2 id="李商隐无题">2025.12.13 李商隐无题</h2>
+<pre><code>有时候
+我多么希望我是汉江上的一朵云
+当你孤独的时候 给你投下一点阴影
+但我不是
+可亲爱的啊 为什么我一看到你的伤疤
+我就越爱你
+越感到痛苦
+我头上的命运
+就越一发不可收拾地
+河水
+推着我们不停向前…
+亲爱的
+既然我们相爱
+为什么我们还在河畔
+拔柳哭泣</code></pre>
+<h2 id="到了冬天">2025.12.26 到了冬天</h2>
+<p>到了冬天，空气中的气味变得鲜明起来。尘土，雨水，黄昏，树叶，过往的人和事扑面而来。</p>
+<p>马路边上的灯在路边投下一排罩形的灯束，昏黄的颜色，人们在夜气中向前赶，摩托车快速划过。</p>
+<p>到了冬天，人变得渺小起来。诚然，我们也三三两两地聚在一起，但一切和夏天不一样了：你不再有对未来一年的美好期待做依傍，不再有强烈的阳光驱使着你往前走，在这里你只做停留，所有的灰尘和树叶都落了下来，你终于说出这个担心了一年的结论：又是一年，“一事无成”。就像垃圾桶旁边坐着的老头，他感叹道：离死亡又近了一岁。人类变得孤独起来。</p>
+<p>难怪到了冬天，古人会说：木叶零落，美人迟暮。时间不停地流逝，不留痕迹，而我们害怕流逝。</p>
+<p>有的哲学家教导我们不要害怕死亡，不要害怕时间，更不用害怕一事无成。就比如，情侣可以用强烈的爱来克服神学的冲动走到一起，并因此而感到侥幸。我们当然希望自己的一点一滴能被某个神明（不管他叫上帝，历史，社会，还是概念，是没差别的）见证，仿佛可以以此对抗心中的恐惧；但他们不需要被见证，他们只要爱人的包容一切的目光。面对恐惧，不要去对抗，而是要遗忘。</p>
+<p>可最终，他们也许还是会走向冬天。他们也许还是会发出这样的疑问：爱又怎么样？不爱又怎么样？</p>
+<p>到了冬天，一切还是显得孤独和渺小。尽管我们越来越学会遗忘，尽管我们知道大可以用“萧瑟”一个词就装下恐惧的游魂。可它总是从这个词语中挣脱出来，让我们不敢迈出一步。</p>
+<h2 id="section">2026.1.1</h2>
+<p>有那么一两刻我对朗西埃的喜欢突然变得强烈：
+从她的面部表情来看，我感觉她似乎很放松，没有紧绷、防备或讨好。</p>
+<p>哎，但是左想右想，我还是不知道怎么描述和她度过的两个晚上。很快乐，但并没有满怀激动小心翼翼的试探感；不是很深入，但似乎又并不需要很深入。I
+don’t know what is it supposed to be, I don’t know what is ahead of me.
+我不知道我们两个人能不能真心相爱，再看吧，等待时间和身体给我答案。</p>
+<p>不过这么想来，也许我和黑格尔是非常幸运的。那是我第一次那么爱一个人，一切都充满了新鲜感。而且我很快就在我们的关系中找到了位置。</p>
+<h2 id="野格酒">2026.1.10 野格酒</h2>
+<p>昨天和朗西埃相互折磨了一个晚上，我们乐此不疲。我不知道我现在是什么心情。我不知道我在这段关系中想要什么，仿佛我可以立马回到一种不为别人的生活。当然，你总是渴望在他人的眼睛中获得承认，可是你没有，你是无力的。</p>
+<p>我还感到罪孽感。“罪孽”，这是对于卑鄙、下贱、恶心还不能弥补的一个高尚化的表述。</p>
+<p>再怎么样，你也不应该逼迫她开口说话。强制他人说话是一种比强制他人沉默更可怕的支配。为什么沉默者不能幸福地生活呢？</p>
+<p>野格酒。好像回到了一个春天…过了那个春天我们就四散离去。</p>
+<h2 id="first-visit-to-california">2026.1.15 First Visit to
+California</h2>
+<p>She said, every thing will be okay, if you have your passport on your
+hand. Even when you lose it, things will turn out to be okay.</p>
+<p>I think I already had her love, a thing that might not be recognized
+by her as love — but that’s enough for me. It occured to me that as long
+as I have her love, the future is promising, and I wouldn’t be fearful.
+How naive would I be? Isn’t this a pure illusion?</p>
+<h2 id="two-poems">2026.1.14-2.7 Two poems</h2>
+<p>印记</p>
+<pre><code>你说，那就这样吧
+我们就这样
+没能留下更多的印记
+只有一整夜絮絮的话语
+停留在你头上的香气
+还有越来越不可靠的回忆
+
+而当我发现它不可靠的时候
+上海和加州已经隔开了一个大洋
+周围已经阳光明媚
+而我还是一枝格格不入的败兰
+
+可败兰还是败兰
+它是一张橡皮擦永也擦不干净的白纸
+我曾拥有大陆、爱、
+五千年的历史
+它们现在只是一串模糊的音节
+于是
+我连思念你的哭泣
+都变得意义不明</code></pre>
+<p>The False Spring</p>
+<pre><code>My love, I know, I know,
+That you know I love you,
+For your words, voice, 
+And the floral pattern in your palm
+Make me know your love, 
+    That you’re thinking of a coming Spring,
+    A sudden rain,
+    Our scrambling into a car,
+    And that you know
+    I long for the Spring as much
+    When we will catch the last snowflake
+    Dropping
+    On the mud of Southern China,
+Or perhaps, unfortunately woven
+Into your cunning joke and my false dream.a</code></pre>
+<h2 id="how-to-balance-between-life-and-work">2026.2.28 How to balance
+between life and work?</h2>
+<p>Always upset about my school grades, to look up the scores is not a
+present to me anymore. To some extent, I lack the motivation of getting
+praised by the ISA system, and also, the anxiety to “give it all out” on
+one thing. I’m not worried about the former but the latter. Because you
+have to push yourself hard in some situations, when the relationship
+between you and the system is not a discussion but a trade, which
+necessarily means you have to reach a certain standard in order to get
+something in return. Therefore I should never be a lazy bum.</p>
+<p><em>And I clearly know there is a paradox.</em> For recently(not so
+‘recent’, truth be told), I have finally given up the endless illusion
+of philosophy — to prove the ‘value’ of thinking is destined to be in
+vain — I gradually picked up the ability to celebrate the mortal things,
+for the first time neither in the shadow of a magnificant idea, nor by
+the name of “the bravery of resisting the nothingness”. The ones you
+love. The literature pieces. A good weather. All the mortal stuff you
+can celebrate. However, that’s just not the way the factory of the world
+runs. The most successful worker is that which has nothing on his hands,
+or almost has nothing compared to what he is to gain. He should own no
+land, have no herds, get expelled from his community. He possesses no
+leisure to celebrate the present. We’ve never heard of a bussiness not
+driven by voidness, poverty, except those fucking philosophers.</p>
+<p>The good thing is that a new question is now on the agenda. But I’m
+not too young to waste my time. A new semetser is coming, and we drove
+peacefully to the summer of our lives.</p>
+<h2 id="在墨西哥城返回途中">2026.3.4 在墨西哥城返回途中</h2>
+<p>在文字下藏着怎样的树木呢，藏着怎样的花朵呢，还有那些只是声音的声音——。会躺着吗，会穿着劳累的一天的牛仔裤坐在床头，我们的袜子将是什么颜色，会不会默默的起身，喝水，关掉台灯，两个人默默的吃着东西。不规则的头发，眼神中的光。脏脏的白色鞋子，会怎么散落。</p>
+<h2 id="焦虑">2026.3.10 焦虑</h2>
+<p>焦虑。最近总是为性而感到焦虑。就要重新见到H了，但我害怕那个夜晚的降临。各种意义上的害怕，害怕我们卸掉文字伪装后的样子，害怕我的身体被看到，害怕和性相关的一切事——ED，早泄，或者是你发现你连亲吻都不会——当然，我也害怕这一切都不会发生，害怕她眼神的黑夜中从来没有升起过火苗，害怕我是一堵平整枯燥的墙，然后她背向我，回到自己的历史、过去、回忆和孤独之中。而且我知道焦虑将在我们的今后以不同的形式复现，就像乐曲的主题一样，这一切的前提只是我们还有今后。我其实并不是一无所有，但是我有的比无更糟糕：瘦小，懦弱，而且游移不定。焦虑在侵蚀着爱。</p>
+<p>这让我想到阿尔都塞误用的一句话：“就连在爱当中，我们也是孤身一人。”阿尔都塞说，我们要承担性、出生、死亡等方面的焦虑，这恐怕是不对的，“承担”似乎暗示了一个给自己行动赋予意义的理性主体，但在现实生活中的所谓赋予往往无比庸俗——正确的应该是，我们应该要承认这个世界本身就是残魄不堪的，你的身体、你的认识等等，不是所有的不义都能够得到补偿，不是所有的历史都能够留下回音，但世界并不因此就停止运行。可惜的是，除此之外，关于他那相遇的唯物主义，阿尔都塞并没有说更多了，他应该告诉我们什么样的相遇是好的，原子的立场如何在一次偏斜中展现，以及，它们如何产生纷争和爱。在德谟克利特的世界中没有害怕，只有相遇和分离。</p>
+<p>爱和纷争是大多数人体会到哲学的唯一时刻——这种情况下不需要向自然寻求。最近在哲学上也步履蹒跚。哲学从来无法回到自身，它只会说出一些意义不明的词汇。当我们说“哲学”的时候，脑海中是不是想到一副女神的模样？她步履轻盈，嘴唇中亲自说出这个世界的真理。</p>
+<h2 id="剩余和爱">2026.3.29 剩余和爱</h2>
+<p>在爱之中我们也是孤身一人。当然，我从来没有把爱当作一种对孤独的拯救…孤独无法被拯救（就像人的有限性是无法被上帝拯救的一样），爱无法触动人孤独这个恒久的事实，但爱诚然触动了一些东西…</p>
+<p>爱不过是孤独的一种形式。它不能带来拯救，但它改变了我们承受孤独的方式。在纯粹的孤独中，你作为一个人是过剩的、多余的。在爱情的孤独中，过剩的则是你的激情。过剩意味着永远无法被接受，意味着一种耗费和没有意义。</p>
+<h2 id="印度之歌">2026.3.30 印度之歌</h2>
+<p>那一天我们在地铁上一起听着《印度之歌》，你说你在图书馆（或是书店）看过这本书，我说我也是，而且没看完。亲爱的，你知道印度之歌是一首没有意义的充满爱的絮絮叨叨的歌。</p>
+<p>就像我很爱你。如同我们从来没理解过印度之歌、只知道那神秘悲哀的语调中满是过剩的情欲一样，你知道我很爱你，我—很—爱—你—，你能从我嘴里听到这四个平庸乏味的汉字的音调，但是你不知道我如何绝望地、越来越无法挽救地走向对你的爱。在我感觉到你在那一头哭泣的时候，在我看到你皮肤上细小的纹路的时候，在我说了太多蠢话而你沉默、并用看傻逼的眼神看我的时候——而你总不告诉我那眼神的含义——我发现自己越来越爱你了，或者说我再也找不觉得词语了。不，你不知道，你不知道爱是怎样伴随着煎熬和痛苦和惊讶。</p>
+<p>你不知道——我的爱人，请你原谅我在这个问题上仅存的专断和傲慢吧，也许你全部都知道，但你不告诉我，这是你的把戏吗？———这个空洞的词语是如何让我激动不已的。它就像那些事物一样空洞：深夜的昏黄的灯光，你的充满倦意的衣摆，我们的一起把一包零食吃完。和这些希望一样空洞：
+我不用工作不用焦虑不用思考人类，你也不用，所以我可以整天整天地爱你，做那些只关于我们两个人的事情。我们有一幢房子，一群牛羊，牛羊和房子都在山坡上。我们终有一天会彼此厌倦，会在一日复一日的共同劳作和清晨的露水中厌倦——可谁的感情不会终结在厌倦中呢？这难道不是终结的最好方式吗？</p>
+<p>[至此中断]</p>
+<h2 id="清明">2026.4.1 清明</h2>
+<p>一切事情都发生得太快了，就像清明之前的、江南的雨。</p>
+<p>但是我们为雨准备了伞，为春天却没有。于是突如其来的春寒让我们颤抖不已。</p>
+<p>于是漂浮在城市上空的雾变成我们衣角的露水，于是人们苏醒的声音压在我们唇上让我们不语，于是春天就变成了我们书桌上的一个摆饰、一个信物、一个纪念品。这个季节的一切都让我想起你，季节拥有了我们，我们拥有了这个季节。</p>
+<p>我们站在街头的玻璃房里等待晨光的升起。卡萨布兰卡，罗马，巴黎，东京，上海。谢谢你，这是我有过的最好的一个晚上。</p>
+<p>你感觉怎么样？你会觉得这一切太沉重了吗？（这个是太阳系消灭之前地球上面的最后一个夜晚）你会觉得自己的生活阻碍了我们吗？（“自己的生活”不过是对于生活本身的狭隘幻想）还有什么，你能告诉我所有的这一切吗？</p>
+<p>…但如果我们相爱，我们会拥有整个世界。</p>
+</body>
+</html>
