@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>其实，所有信都沉到海底了</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Georgia, Palatino, ‘Palatino Linotype‘, Times, ‘Times New Roman‘, serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fefefe;
+}
+a {
+color: #0645ad;
+text-decoration: none;
+}
+a:visited {
+color: #0b0080;
+}
+a:hover {
+color: #06e;
+}
+a:active {
+color: #faa700;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #0645ad;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+font-family: monospace, monospace;
+_font-family: ‘courier new‘, monospace;
+font-size: 0.98em;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+</head>
+<body>
+<h1 id="其实所有信都沉到海底了">其实，所有信都沉到海底了</h1>
+<p>很长一段时间里，我们就像这样不停地做爱：满怀食欲的吃东西，洗澡，拉开窗帘分有一点城市的灯光，脱掉衣服，上床，丢一地的纸巾，然后畅聊一整晚。仿佛这样能够让我们忘记时间的流逝。</p>
+<p>一开始的时候，让我欲罢不能的，是她的那种自由自在的、挣扎着想要掩盖自己意图但是又干脆放弃的、没有道德感的坏笑。让我羡慕一辈子的那种不顾他人死活的坏笑。</p>
+<p>于是我被她深深吸引了。电影，约会，聊天，互相试探，然后相互亲吻。</p>
+<p>当我们开始这样之后，她又多了让我欲罢不能的东西，她的身体，她的全部的身体。希腊雕塑般的身体，每一处细节，每一处的瑕疵，每一个发梢的末端，每一个随着太阳方位变化而产生的变化，仿佛都藏着雕刻者巧妙的意图。只不过这是中国北方的希腊雕塑：大理石一般都身体，葡萄柚一般的乳房。最让我嫉妒的是，我不是这个雕刻者，我甚至连跑到那个雕刻她的工作室里去认识它的机会都没有。但往往就是这个时候，当我感到一个夜晚的渺小而几乎要流泪的时候，她又会不怀好意地斜眼看着我。</p>
+<p>她说，“这不公平，我脱了你也得脱。”</p>
+<p>结束之后 ，她总是会流露出悲悯的眼神。</p>
+<p>除了做爱，我们还会相互满足对方窥视的欲望，准确来说是我满足她的，让她看所有我写过的满意不满意的东西。至于她写的，我没有权限看。我老早就已经接受了：在很多地方我都不拥有权限，只有在她希望我们平等的地方，我才尽力配合。但是让那些拙劣的文字被窥视，对我来说是本质重要的。我嘴上说着不重要，我说它们都是做爱时留的汗水，没有用处，没有意义。但当她一一舔掉它们的时候，当她认真观看，每一个细节都不愿意放过的时候，当我不管多么刻意地捏造出一些不属于我的东西——小丑戏，古希腊悲剧，拙劣的模仿海子的诗歌——她都一一舔舐，然后喘息着给我评论的时候，这些伤疤和失败都变得有意义起来。她知道我为什么觉得这些东西重要，因为那些文字里表达了我羞答答的欲望和期待，而她对这些文字的阅读，向我传达了对这些期待的暧昧的允诺——在现实中给出允诺过于沉重。我知道这对她来说也本质重要：因为现实的东西川流不息，虚幻的东西长存永驻，那些拙劣的文字是掩盖在我们终将抛弃的身体上的光滑的裹尸布。这些我们都知道，或者说我们都以为对方知道。</p>
+<p>但那个时候我不会把所有的精力放在文字的编织上。那个时候现实世界比虚幻世界要丰富得多。更多的时候，我还是忙着感受她雕塑般的身体，忙着被她那充满悲伤的眼神注视，忙着策划一些并不好笑的玩笑、并不精彩的庆典。一万年太久，只争朝夕——我们所拥有的时间实在是太短了，而我们所拥有的时间实在太幸福了。</p>
+<p>“我不会给你写小说的，”我对她说，“因为你让我感到幸福。”</p>
+<p>她回答说，“就算哪天我不让你感到幸福了，我也会看你写的每个字的。”</p>
+<p>就这样，你们总是说得太多，说得太他妈的多，你们用对未来的精准预言代替对未来的改造——这一度是你们看低你们关系的原因。但是直到我们因为这个原因而分开之后，我才发现这个世界的神奇之处：当你以为你什么都不拥有的时候，其实你拥有许多。曾经你至少拥有身体、词语以及幻想。而在未来的日子里，你会把它们一个一个地丢掉。到最后，当你毕业了、她出国了，你们中有人失业了，于是你连幻想也不剩下。</p>
+</body>
+</html>
