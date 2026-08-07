@@ -51,7 +51,7 @@
     "@semantic-release/exec": "^3.3.0",
     "@storybook/addon-backgrounds": "^5.0.11",
     "@storybook/addon-knobs": "^5.0.11",
-    "@storybook/html": "^5.0.0",
+    "@storybook/html": "^7.0.9",
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.4",
     "clean-css-cli": "^4.2.1",
