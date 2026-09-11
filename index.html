@@ -1,19 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>本网站停更，因笔者已经过了文艺青年的年纪了</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f8f8f6">
+<title>Yida's Simple Blog</title>
+<link rel="stylesheet" href="styles/blog.css">
+<script defer src="vendor/marked.js"></script>
+<script defer src="vendor/purify.js"></script>
+<script defer src="scripts/content.js"></script>
+<script defer src="scripts/app.js"></script>
 </head>
 <body>
-  <p>
-    But he had never written a line of that, nor of that cold, bright Christmas day
-    with the mountains showing across the plain that Barker had flown across the lines
-    to bomb the Austrian officers' leave train,
-    machine-gunning them as they scattered and ran.
-    He remembered Barker afterwards coming into the mess
-    and starting to tell about it. And how quiet it got
-    and then somebody saying, ''You bloody murderous bastard.''
-  </p>
+<header class="site-header">
+<a class="wordmark" href="./">Yida's <i>Simple</i> Blog</a>
+<div class="header-right"><button id="navToggle" class="dot-button" aria-label="打开快速导航" aria-expanded="false" aria-controls="navigation" title="左右点击或滑动：翻页。上下滑动：切换文章。点击圆点：打开或关闭时间轴。原版 HTML 可自由滚动，到顶或到底后再次向外滑动切换文章。"><span></span></button></div>
+</header>
+<main id="reader" aria-label="文章阅读区">
+<div id="bookViewport"><article id="book" class="prose"></article></div>
+<iframe id="legacyFrame" title="原版文章" hidden sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+<div id="loading" role="status" aria-label="正在加载"></div>
+<button id="previousPage" class="page-edge previous" aria-label="上一页"></button>
+<button id="nextPage" class="page-edge next" aria-label="下一页"></button>
+</main>
+<dialog id="navigation" aria-label="快速导航">
+<section class="timeline-section" aria-label="文章时间轴">
+<div id="titleFrame">
+<svg class="title-pattern" viewBox="0 0 720 160" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1">
+<g data-theme="风"><path d="M0 40 Q35 15 70 40 T140 40 M10 57 Q40 32 80 57 T150 57 M570 110 Q605 85 640 110 T720 110 M580 127 Q615 102 650 127 T720 127"/></g>
+<g data-theme="夜晚"><path d="M58 20 A25 25 0 1 0 80 58 A26 26 0 0 1 58 20 M635 110v20m-10-10h20 M675 80v12m-6-6h12 M105 45v12m-6-6h12"/><circle cx="650" cy="45" r="1.5"/><circle cx="35" cy="115" r="1.5"/></g>
+<g data-theme="夏天"><circle cx="58" cy="45" r="17"/><path d="M58 17V8m0 65v9M30 45h-9m65 0h9M38 25l-7-7m47 47 7 7M78 25l7-7M38 65l-7 7 M626 150q30-45 69-52q-5 38-69 52m0 0 52-35"/></g>
+<g data-theme="时间"><circle cx="58" cy="48" r="27"/><circle cx="58" cy="48" r="20"/><path d="M58 30v18l12 9 M646 100h45m-45 46h45 M651 100q0 16 17 23q18 7 18 23 M686 100q0 16-18 23q-17 7-17 23"/></g>
+</svg>
+<p id="previewTitle"></p>
+</div>
+<div id="timeline" aria-label="移动或滑动选择文章；点击标尺阅读"></div>
+</section>
+<p class="nav-help">左右点击或滑动翻页，上下滑动切换文章。<br>点击刻度阅读，点击圆圈返回；圆圈填充表示阅读进度。<br>原版 HTML 到顶或到底后，再向外滑动切换文章。</p>
+</dialog>
 </body>
 </html>
