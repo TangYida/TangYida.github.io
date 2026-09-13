@@ -18,7 +18,7 @@ python3 -m http.server 4173 --bind 127.0.0.1
 { "title": "风和海", "category": "风", "date": "2022-12-26" }
 ```
 
-运行 `node build.js` 合并旧索引和目录中的文章，更新 `list.json`、`MIGRATION_REVIEW.md` 和 `scripts/index-audit.json`。旧索引保存在 `scripts/legacy-index.json`；原始 `posts.js` 也保留供对照。构建无需联网或安装依赖。已有条目的日期和分类会保留，适合直接人工校正 `list.json`。排除规则在 `scripts/build-index.cjs`。
+运行 `node build.js` 时以 `list.json` 为唯一索引来源，并据此更新正文包 `scripts/content.js`；不会再从 `passages/` 自动重写整份索引，也不会更新 `MIGRATION_REVIEW.md` 或 `scripts/index-audit.json`。如果列表条目缺少同名 `.md`/`.html`，构建会逐项警告；如果目录中有未列入索引的文件，构建会列出候选项，输入一个或多个序号可将所选文章加入 `list.json`，输入 `0` 则不作同步。构建无需联网或安装依赖。
 
 构建时优先寻找同名 `.md`，没有时使用 `.html`，将索引与正文写入 `scripts/content.js`。编辑文章或 list.json 后需运行 `node build.js`。Markdown 在浏览器中安全解析，图片、视频和字体加载后按视口重新分页。窗口尺寸改变时保留相对阅读进度。HTML 在独立框架中呈现原版排版。新增同名 Markdown 后可以删除旧 HTML；初次迁移已自动去重。
 
@@ -34,7 +34,7 @@ GitHub Pages 使用根目录 `404.html` 将旧的文章 `.html` 链接导向新�
 
 ## 迁移与复核
 
-`MIGRATION_REVIEW.md` 是未收录 HTML 和其他例外的复核清单；`scripts/index-audit.json` 逐篇记录日期、分类的来源。自动推断的分类、正文日期与文件创建日期需要人工复核，尤其创建日期并不等于写作日期。
+`MIGRATION_REVIEW.md` 是初次迁移时的未收录 HTML 和其他例外复核清单；`scripts/index-audit.json` 是当时逐篇记录的日期、分类来源。它们不会再由日常构建更新。交互同步新文章时自动推断的分类、正文日期与文件创建日期需要人工复核，尤其创建日期并不等于写作日期。
 
 完整旧站和移出站点的旧目录保存在站点外备份，具体路径见 `scripts/cleanup.json`。`imfess` 源目录未修改。`scripts/migrate.py` 是一次性导入记录，不应重复运行。
 
